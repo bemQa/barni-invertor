@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'RotondaC';
+    src: url('RotondaC-Bold.eot');
+    src: url('RotondaC-Bold.eot?#iefix') format('embedded-opentype'),
+        url('RotondaC-Bold.woff2') format('woff2'),
+        url('RotondaC-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RotondaC';
+    src: url('RotondaC.eot');
+    src: url('RotondaC.eot?#iefix') format('embedded-opentype'),
+        url('RotondaC.woff2') format('woff2'),
+        url('RotondaC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MDLZ BITE TYPE';
+    src: url('MDLZBITETYPE-Regular.eot');
+    src: url('MDLZBITETYPE-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MDLZBITETYPE-Regular.woff2') format('woff2'),
+        url('MDLZBITETYPE-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Odds';
+    src: url('Odds-Regular.eot');
+    src: url('Odds-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Odds-Regular.woff2') format('woff2'),
+        url('Odds-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iskra CYR Md';
+    src: url('IskraCYRMd.eot');
+    src: url('IskraCYRMd.eot?#iefix') format('embedded-opentype'),
+        url('IskraCYRMd.woff2') format('woff2'),
+        url('IskraCYRMd.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
