@@ -199,7 +199,61 @@ $(document).ready(function () {
             slidesToShow: 1,
             variableWidth: true
         });
+
+        $('.lk-tastes.mobile-visible').slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1
+        });
     }
+
+    $('.tooltip-trigger').click(function(e) {
+        e.preventDefault();
+        $(this).next().addClass('active');
+    });
+
+    $('.close-tooltip').click(function(e) {
+        e.preventDefault();
+        $(this).parent().removeClass('active');
+    });
+
+    $('.btn-number').click(function(e) {
+        var type = $(this).attr('data-type');
+        var field = $(this).attr('data-field');
+        var input = $(this).parent().find('input[name ='+field+']');
+        var min = input.attr('min');
+        var max = input.attr('max');
+        min = parseInt(min);
+        max = parseInt(max);
+        var currentVal;
+        var value = input.val();
+        if (type == 'minus') {
+            if (value > min) {
+                currentVal = parseInt(value) - 1;
+                input.val(currentVal).change();
+            }
+        }
+        if (type == 'plus') {
+            if (value < max) {
+                currentVal = parseInt(value) + 1;
+                input.val(currentVal).change();
+            }
+        }
+    });
+    $('.input-number').change(function() {
+        var min = $(this).attr('min');
+        var max = $(this).attr('max');
+        var val = $(this).val();
+        var name = $(this).parent().find('.input-number').attr('name');
+        if (val == min) {
+            $(this).parent().find(".btn-number[data-type='minus'][data-field='" + name + "']").attr('disabled', 'true');
+        } else $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled');
+        if (val == max) {
+            $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").attr('disabled', 'true');
+        } else $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled');
+    });
 
 });
 
