@@ -1862,11 +1862,78 @@ table td:nth-child(3) {
 }
 
 .lk-taste-link {
+    position: relative;
+    display: inline-block;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
     color: #949494;
+}
+
+.lk-taste-link.wait {
+    padding-left: 15px;
+}
+
+.lk-taste-link.reject {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.lk-taste-link.success {
+    padding-left: 15px;
+}
+
+.lk-taste-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 11px;
+    height: 11px;
+}
+
+.lk-taste-link.wait::before {
+    background: url(../img/wait-icon.svg) center no-repeat;
+    background-size: contain;
+}
+
+.lk-taste-link.reject::before {
+    background: url(../img/reject-icon.svg) center no-repeat;
+    background-size: contain;
+}
+
+.lk-taste-link.success::before {
+    background: url(../img/success-icon.svg) center no-repeat;
+    background-size: contain;
+}
+
+.lk-taste-link.reject::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 11px;
+    height: 11px;
+    background: url(../img/why-icon.svg) center no-repeat;
+    background-size: contain;
+}
+
+.reject-popup .popup__desc {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #003595;
+    text-shadow: none;
+}
+
+.reject-popup .btn-popup {
+    max-width: 300px;
+    padding: 18px 25px 17px;
 }
 
 .lk-taste-name {
@@ -2840,6 +2907,11 @@ table td:nth-child(3) {
         left: 0;
         right: 0;
         margin: auto;
+        width: 100px;
+    }
+
+    .lk-taste-link.success {
+        width: 80px;
     }
 
     .lk-taste-name {
