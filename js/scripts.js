@@ -129,9 +129,16 @@ $(document).ready(function () {
             });
         });
     } else {
-        $('select').select2({
+        $('select').not('.select-search').select2({
             minimumResultsForSearch: Infinity,
             dropdownParent: $('.select')
+        });
+        $('.select-search').each(function() {
+            let $this = $(this);
+            let parent = $(this).parents('.select');
+            $this.select2({
+                dropdownParent: parent
+            });
         });
     }
 
@@ -254,6 +261,155 @@ $(document).ready(function () {
             $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").attr('disabled', 'true');
         } else $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled');
     });
+
+    if($('.constructor-page').length) {
+        $('.taste-slider').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            centerMode: true
+        }); 
+
+        if($('#dough').val() != '') {
+            let dough = $('#dough').val();
+            let dough_color = $('#dough').attr('data-dough-color');
+
+            $('.taste-element[data-dough="'+ dough +'"]').addClass('choice');
+            $('.dough').addClass('choice dough'+dough_color);
+
+            $('.constructor-slide1 .next-constructor-slide .btn').removeClass('disabled');
+
+            $('.constructor-slide3').attr('data-dough-color', dough_color);
+            $('.constructor-slide3 .taste-element').attr('data-dough-color', dough_color);
+            $('.constructor-slide3 .filling').removeClass().addClass('filling filling'+ dough_color);
+        }
+
+        $('.constructor-slide1 .taste-element').click(function(e) {
+            let dough = $(this).data('dough');
+            let dough_color = $(this).data('dough-color');
+
+            $('#dough').val(dough);
+            $('#dough').attr('data-dough-color', dough_color);
+
+            $('.constructor-slide1 .taste-element').removeClass('choice');
+            $(this).addClass('choice');
+            
+            $('.dough').removeClass('choice dough1 dough2 dough3');
+            $('.dough').addClass('choice dough'+dough_color);
+
+            $('.constructor-slide1 .next-constructor-slide .btn').removeClass('disabled');
+
+            $('.constructor-slide3').attr('data-dough-color', dough_color);
+            $('.constructor-slide3 .taste-element').attr('data-dough-color', dough_color);
+            $('.constructor-slide3 .filling').removeClass().addClass('filling filling'+ dough_color);
+        });
+
+        $('.remove-dough').click(function(e) {
+            $('#dough').val('');
+            $('#dough').attr('data-dough-color', '');
+
+            $('.constructor-slide1 .taste-element').removeClass('choice');
+            $('.dough').removeClass('choice dough1 dough2 dough3');
+
+            $('.constructor-slide1 .next-constructor-slide .btn').addClass('disabled');
+
+            $('.constructor-slide3').attr('data-dough-color', '');
+            $('.constructor-slide3 .taste-element').attr('data-dough-color', '');
+        });
+
+        $('.constructor-slide-btn').click(function(e) {
+            let slide = $(this).data('slide');
+
+            let dough = $('#dough').val();
+            let dough_color = $('#dough').attr('data-dough-color');
+            let filling = $('#filling').val();
+
+            if(slide != '') {
+                $(this).closest('.constructor-slide').hide();
+                $('.constructor-result-slide').hide();
+                $(slide).show();
+
+                if(slide == '.constructor-result-slide') {
+                    $('.constructor-slides').hide();
+                    $('.taste-result').html('<img src="img/constructor/taste/'+ String(dough_color)+String(filling) +'.png" alt="Вкус">');
+                } else {
+                    $('.constructor-slides').show();
+                    $('.constructor-result-slide').hide();
+                }
+            }
+        });
+
+        $('.filling-group').click(function(e) {
+            let slide = $(this).data('slide');
+
+            if(slide != '') {
+                $(this).closest('.constructor-slide').hide();
+                $(slide).show();
+                $(slide + ' .taste-slider').slick('reinit');
+                // if(slide == '.constructor-slide3-4') {
+                //     $(slide + ' .taste-slider').slick('destroy');
+                //     $(slide + ' .taste-slider').slick({
+                //         dots: false,
+                //         arrows: true,
+                //         infinite: false,
+                //         speed: 300,
+                //         slidesToShow: 5,
+                //         slidesToScroll: 1,
+                //         centerMode: true
+                //     }); 
+                // }
+            }
+        });
+
+        if($('#filling').val() != '') {
+            let filling = $('#filling').val();
+            let dough_color = $('.taste-element[data-filling="'+ filling +'"]').data('dough-color');
+
+            $('.taste-element[data-filling="'+ filling +'"]').addClass('choice');
+            $('.filling').removeClass().addClass('filling filling'+String(dough_color)+' choice filling'+String(dough_color)+String(filling));
+
+            $('.constructor-slide3 .next-constructor-slide .btn').removeClass('disabled');
+
+            $('.constructor-slide3 .page-subtitle').html('Здорово придумано :) Эта начинка идеально подходит <br class="desktop-visible">к бисквиту Барни!');
+        }
+
+        $('.constructor-slide3 .taste-element').click(function(e) {
+            let filling = $(this).data('filling');
+            let dough_color = $(this).data('dough-color');
+
+            $('#filling').val(filling);
+
+            $('.constructor-slide3 .taste-element').removeClass('choice');
+            $(this).addClass('choice');
+            
+            $('.filling').removeClass().addClass('filling filling'+String(dough_color)+' choice filling'+String(dough_color)+String(filling));
+
+            $('.constructor-slide3 .next-constructor-slide .btn').removeClass('disabled');
+
+            $('.constructor-slide3 .page-subtitle').html('Здорово придумано :) Эта начинка идеально подходит <br class="desktop-visible">к бисквиту Барни!');
+
+            $('.taste-result').html('<img src="img/constructor/taste/'+ String(dough_color)+String(filling) +'.png" alt="Вкус">');
+        });
+
+        $('.remove-filling').click(function(e) {
+            let dough_color = $('#dough').attr('data-dough-color');
+            console.log(dough_color)
+
+            $('#filling').val('');
+
+            $('.constructor-slide3 .taste-element').removeClass('choice');
+            $('.filling').removeClass().addClass('filling filling'+dough_color);
+
+            $('.constructor-slide3 .next-constructor-slide .btn').addClass('disabled');
+
+            $('.constructor-slide3 .page-subtitle').html('Теперь добавим начинку! <br>Выберите один из вариантов и перетащите к бисквитному медвежонку:');
+
+            $('.taste-result').empty();
+        });
+    }
 
 });
 

@@ -185,7 +185,7 @@
 										<div class="lk-taste-img">
 											<img src="img/taste.png" alt="">
 										</div>
-										<a href="#!" class="lk-taste-link success">Принята</a>
+										<div class="lk-taste-link success">Принята</div>
 									</div>
 									<div class="lk-taste-info">
 										<div class="lk-taste-name">Абрикосовый вайб</div>
@@ -301,7 +301,7 @@
 											<div class="lk-taste-img">
 												<img src="img/taste.png" alt="">
 											</div>
-											<a href="#!" class="lk-taste-link success">Принята</a>
+											<div class="lk-taste-link success">Принята</div>
 										</div>
 										<div class="lk-taste-info">
 											<div class="lk-taste-name">Абрикосовый вайб</div>
@@ -350,7 +350,7 @@
 										<img src="img/figures/figure1.png" alt="">
 									</div>
 									<div class="lk-figure-text1">Фигурка заказана <br class="desktop-visible">ХХ.ХХ.2022 г.</div>
-									<div class="lk-figure-text2">Готовится <br class="desktop-visible">к отправке</div>
+									<a href="#!" class="lk-figure-btn pop-op" data-popup="get-prize-address">Получить</a>
 								</div>
 								<div class="lk-figure figure2">
 									<div class="lk-figure-img">
@@ -554,25 +554,16 @@
 		        <div class="popup__inner">
 		        	<div class="popup__title">Введите адрес для доставки фигурок</div>
 		        	<div class="popup__desc">
-		                Оставьте свой адрес для получения приза
+		                Все поля обязательны для заполнения:
 		            </div>
 		            <div class="popup__error"></div>
 		        	<form class="popup-form">
-			            <div class="input-field">
-                    		<input type="text" name="name" placeholder="Имя" required>
-                    	</div>
-			            <div class="input-field">
-                    		<input type="text" name="patronymic" placeholder="Отчество" required>
-                    	</div>
-                    	<div class="input-field mb30">
-                    		<input type="text" name="lastName" placeholder="Фамилия" required>
-                    	</div>
-                    	<div class="input-field mb30">
-                    		<input type="text" name="phone" class="phone-mask" placeholder="Мобильный телефон для связи" required>
+                    	<div class="input-field">
+                    		<input type="text" name="zip" placeholder="Индекс заполняется автоматически" disabled required>
                     	</div>
                     	<div class="input-field">
                     		<div class="select">
-				                <select name="region" class="select-search" data-placeholder="Регион" required>
+				                <select name="region" class="select-search" data-placeholder="Область" required>
 				                    <option value=""></option>
 				                    <option value="1">Приз 1 Приз 1 Приз 1 Приз 1 Приз 1 Приз 1 Приз 1 Приз 1 Приз 1</option>
 				                    <option value="2">Приз 2</option>
@@ -582,7 +573,7 @@
                     	</div>
 			            <div class="input-field">
 			            	<div class="select">
-				                <select name="city" class="select-search" data-placeholder="Населенный пункт" required>
+				                <select name="city" class="select-search" data-placeholder="Город" required>
 				                    <option value=""></option>
 				                    <option value="1">Приз 1</option>
 				                    <option value="2">Приз 2</option>
@@ -600,19 +591,22 @@
 				                </select>
 				            </div>
 			            </div>
-			            <div class="input-field mb30">
-			            	<div class="select-wrap">
-				                <div class="select">
-				                    <select name="house" class="select-search" data-placeholder="Дом" required>
-				                        <option value=""></option>
-				                        <option value="1">Приз 1</option>
-				                        <option value="2">Приз 2</option>
-				                        <option value="3">приз 3</option>
-				                    </select>
-				                </div>
-				                <input type="text" name="flat" id="flat" class="popup__input-text" placeholder="Квартира">
+			            <div class="input-field">
+			            	<div class="select">
+				                <select name="house" class="select-search" data-placeholder="Дом, корпус/строение" required>
+				                    <option value=""></option>
+				                    <option value="1">Приз 1</option>
+				                    <option value="2">Приз 2</option>
+				                    <option value="3">приз 3</option>
+				                </select>
 				            </div>
 			            </div>
+			            <div class="input-field">
+                    		<input type="text" name="flat" placeholder="Квартира" required>
+                    	</div>
+                    	<div class="input-field mb30">
+                    		<input type="text" name="fio" placeholder="Фамилия Имя Отчество" required>
+                    	</div>
 			            <div class="btn-wrapper">
 							<button class="btn btn-popup">Отправить</button>
 						</div>

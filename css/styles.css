@@ -440,7 +440,7 @@ body .mr150 {
 
 /* Select2 */
 .select {
-    max-width: 410px;
+    max-width: 420px;
     min-width: 140px;
     width: 100%;
     /*margin: 10px auto;*/
@@ -1353,8 +1353,8 @@ footer .container {
     padding-top: 20px;
     padding-left: 20px;
     height: 140px;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .input-field input:focus,
@@ -2130,6 +2130,20 @@ table td:nth-child(3) {
     color: #FECF0A;
 }
 
+.lk-figure-btn {
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FECF0A;
+    width: 94px;
+    height: 26px;
+    margin-top: 4px;
+    padding: 5px 10px 6px;
+    border: 1px solid #FECF0A;
+    border-radius: 14px;
+}
+
 .tooltip {
     position: absolute;
     top: 0;
@@ -2297,6 +2311,7 @@ table td:nth-child(3) {
     background: transparent;
     width: 35px;
     margin: 0 2px;
+    padding: 0;
     font-family: 'Odds';
     font-style: normal;
     font-size: 30px;
@@ -2304,6 +2319,11 @@ table td:nth-child(3) {
     text-align: center;
     text-transform: uppercase;
     color: #E27F30;
+}
+
+.popup input[disabled] {
+    font-size: 15px;
+    color: rgb(0 53 149 / 40%);
 }
 
 .popup .select {
@@ -2317,8 +2337,13 @@ table td:nth-child(3) {
 
 .popup .select2-container--default .select2-selection--single .select2-selection__rendered,
 .popup .select2-container--default .select2-selection--single .select2-selection__placeholder {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
+}
+
+.popup .select2-container--default .select2-search--dropdown .select2-search__field {
+    height: 40px;
+    font-size: 14px;
 }
 
 .popup .select2-container--default .select2-results>.select2-results__options {
@@ -2354,14 +2379,1197 @@ table td:nth-child(3) {
     width: 100%;
 }
 
+.constructor-page {
+    min-height: 830px;
+    padding-bottom: 100px;
+}
 
+.page-subtitle {
+    position: relative;
+    font-size: 26px;
+    line-height: 1;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 600px;
+    width: 100%;
+    margin: 15px auto 0;
+}
 
+.constructor-slide1 {
+    padding-bottom: 240px;
+}
 
+.taste-slider {
+    max-width: 1000px;
+    width: 100%;
+    height: 168px;
+    margin: 20px auto;
+}
 
+.taste-slider .slick-arrow {
+    width: 39px;
+    height: 40px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 
+.taste-slider .slick-prev {
+    left: -15px;
+    background: url(../img/arrow-left-taste.png) center no-repeat;
+    background-size: contain;
+}
 
+.taste-slider .slick-next {
+    right: -15px;
+    background: url(../img/arrow-right-taste.png) center no-repeat;
+    background-size: contain
+}
 
+.taste-slider .slick-arrow.slick-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
 
+.taste-slide {
+    opacity: 1;
+    transition: all .2s linear;
+}
+
+.taste-slide:not(.slick-active) {
+    opacity: 0;
+}
+
+.constructor-slide3-4 .taste-slide:not(.slick-active) {
+    opacity: 1;
+}
+
+.taste-element {
+    width: 142px;
+    height: 142px;
+    margin: 0 auto;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.taste-element-name {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.dough-taste1 {
+    background: url(../img/constructor/dough-taste1.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste1.choice {
+    background: url(../img/constructor/dough-taste-outline1.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste2 {
+    background: url(../img/constructor/dough-taste2.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste2.choice {
+    background: url(../img/constructor/dough-taste-outline2.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste3 {
+    background: url(../img/constructor/dough-taste3.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste3.choice {
+    background: url(../img/constructor/dough-taste-outline3.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste4 {
+    background: url(../img/constructor/dough-taste4.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste4.choice {
+    background: url(../img/constructor/dough-taste-outline4.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste5 {
+    background: url(../img/constructor/dough-taste5.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste5.choice {
+    background: url(../img/constructor/dough-taste-outline5.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste6 {
+    background: url(../img/constructor/dough-taste6.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste6.choice {
+    background: url(../img/constructor/dough-taste-outline6.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste7 {
+    background: url(../img/constructor/dough-taste7.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste7.choice {
+    background: url(../img/constructor/dough-taste-outline7.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste8 {
+    background: url(../img/constructor/dough-taste8.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste8.choice {
+    background: url(../img/constructor/dough-taste-outline8.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste9 {
+    background: url(../img/constructor/dough-taste9.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste9.choice {
+    background: url(../img/constructor/dough-taste-outline9.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste10 {
+    background: url(../img/constructor/dough-taste10.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste10.choice {
+    background: url(../img/constructor/dough-taste-outline10.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste11 {
+    background: url(../img/constructor/dough-taste11.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough-taste11.choice {
+    background: url(../img/constructor/dough-taste-outline11.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough {
+    position: absolute;
+    bottom: -75px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 370px;
+    height: 300px;
+    background: url(../img/constructor/dough1.png) center no-repeat;
+    background-size: contain;
+    transition: all .2s linear;
+}
+
+.dough1 {
+    background: url(../img/constructor/dough1.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough2 {
+    background: url(../img/constructor/dough2.png) center no-repeat;
+    background-size: contain;
+}
+
+.dough3 {
+    background: url(../img/constructor/dough3.png) center no-repeat;
+    background-size: contain;
+}
+
+.remove-taste {
+    display: none;
+    position: absolute;
+    padding-top: 45px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.choice .remove-taste {
+    display: block;
+}
+
+.remove-dough {
+    top: 180px;
+    left: 0;
+    right: 0;
+}
+
+.remove-taste::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    background: url(../img/remove-icon.png) center no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.constructor-slide-btn-wrapper {
+    position: absolute;
+    top: 450px;
+    width: max-content;
+    margin: auto;
+}
+
+.constructor-slide1 .next-constructor-slide {
+    right: 0;
+}
+
+.constructor-slide-btn-wrapper .btn {
+    max-width: 300px;
+}
+
+.constructor-slide-btn-wrapper .btn img {
+    margin: 0 5px;
+}
+
+.filling-groups {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.filling-group {
+    position: relative;
+    width: 190px;
+    height: 202px;
+    padding: 16px 8px;
+    margin: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.filling-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    right: -50px;
+    bottom: 0;
+    margin: auto;
+    width: 202px;
+    height: 214px;
+    background: url(../img/filling-group-bg.png) center no-repeat;
+    background-size: contain;
+    z-index: 0;
+}
+
+.filling-group-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 143px;
+}
+
+.filling-group-name {
+    position: relative;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #003595;
+}
+
+.constructor-slide2 .prev-constructor-slide {
+    left: -300px;
+    right: 0;
+}
+
+.constructor-slide2 .next-constructor-slide {
+    left: 0;
+    right: -300px;
+}
+
+.constructor-slide3 {
+    padding-bottom: 240px;
+}
+
+.filling-taste1 {
+    background: url(../img/constructor/filling-taste1.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste1.choice {
+    background: url(../img/constructor/filling-taste-outline1.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste2 {
+    background: url(../img/constructor/filling-taste2.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste2.choice {
+    background: url(../img/constructor/filling-taste-outline2.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste3 {
+    background: url(../img/constructor/filling-taste3.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste3.choice {
+    background: url(../img/constructor/filling-taste-outline3.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste4 {
+    background: url(../img/constructor/filling-taste4.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste4.choice {
+    background: url(../img/constructor/filling-taste-outline4.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste5 {
+    background: url(../img/constructor/filling-taste5.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste5.choice {
+    background: url(../img/constructor/filling-taste-outline5.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste6 {
+    background: url(../img/constructor/filling-taste6.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste6.choice {
+    background: url(../img/constructor/filling-taste-outline6.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste7 {
+    background: url(../img/constructor/filling-taste7.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste7.choice {
+    background: url(../img/constructor/filling-taste-outline7.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste8 {
+    background: url(../img/constructor/filling-taste8.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste8.choice {
+    background: url(../img/constructor/filling-taste-outline8.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste9 {
+    background: url(../img/constructor/filling-taste9.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste9.choice {
+    background: url(../img/constructor/filling-taste-outline9.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste10 {
+    background: url(../img/constructor/filling-taste10.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste10.choice {
+    background: url(../img/constructor/filling-taste-outline10.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste11 {
+    background: url(../img/constructor/filling-taste11.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste11.choice {
+    background: url(../img/constructor/filling-taste-outline11.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste12 {
+    background: url(../img/constructor/filling-taste12.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste12.choice {
+    background: url(../img/constructor/filling-taste-outline12.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste13 {
+    background: url(../img/constructor/filling-taste13.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste13.choice {
+    background: url(../img/constructor/filling-taste-outline13.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste14 {
+    background: url(../img/constructor/filling-taste14.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste14.choice {
+    background: url(../img/constructor/filling-taste-outline14.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste15 {
+    background: url(../img/constructor/filling-taste15.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste15.choice {
+    background: url(../img/constructor/filling-taste-outline15.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste16 {
+    background: url(../img/constructor/filling-taste16.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste16.choice {
+    background: url(../img/constructor/filling-taste-outline16.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste17 {
+    background: url(../img/constructor/filling-taste17.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste17.choice {
+    background: url(../img/constructor/filling-taste-outline17.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste18 {
+    background: url(../img/constructor/filling-taste18.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste18.choice {
+    background: url(../img/constructor/filling-taste-outline18.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste19 {
+    background: url(../img/constructor/filling-taste19.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste19.choice {
+    background: url(../img/constructor/filling-taste-outline19.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste20 {
+    background: url(../img/constructor/filling-taste20.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste20.choice {
+    background: url(../img/constructor/filling-taste-outline20.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste21 {
+    background: url(../img/constructor/filling-taste21.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste21.choice {
+    background: url(../img/constructor/filling-taste-outline21.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste22 {
+    background: url(../img/constructor/filling-taste22.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste22.choice {
+    background: url(../img/constructor/filling-taste-outline22.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste23 {
+    background: url(../img/constructor/filling-taste23.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste23.choice {
+    background: url(../img/constructor/filling-taste-outline23.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste24 {
+    background: url(../img/constructor/filling-taste24.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste24.choice {
+    background: url(../img/constructor/filling-taste-outline24.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste25 {
+    background: url(../img/constructor/filling-taste25.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste25.choice {
+    background: url(../img/constructor/filling-taste-outline25.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste26 {
+    background: url(../img/constructor/filling-taste26.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste26.choice {
+    background: url(../img/constructor/filling-taste-outline26.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste27 {
+    background: url(../img/constructor/filling-taste27.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling-taste27.choice {
+    background: url(../img/constructor/filling-taste-outline27.png) center no-repeat;
+    background-size: contain;
+}
+
+.filling {
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 292px;
+    height: 261px;
+    background: url(../img/constructor/barni1.png) 0 no-repeat;
+    background-size: contain;
+    /*transition: all .2s linear;*/
+}
+
+.filling1 {
+    background: url(../img/constructor/barni1.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling11 {
+    background: url(../img/constructor/barni-taste11.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling12 {
+    background: url(../img/constructor/barni-taste12.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling13 {
+    background: url(../img/constructor/barni-taste13.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling14 {
+    background: url(../img/constructor/barni-taste14.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling15 {
+    background: url(../img/constructor/barni-taste15.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling16 {
+    background: url(../img/constructor/barni-taste16.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling17 {
+    background: url(../img/constructor/barni-taste17.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling18 {
+    background: url(../img/constructor/barni-taste18.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling19 {
+    background: url(../img/constructor/barni-taste19.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling110 {
+    background: url(../img/constructor/barni-taste110.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling111 {
+    background: url(../img/constructor/barni-taste111.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling112 {
+    background: url(../img/constructor/barni-taste112.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling113 {
+    background: url(../img/constructor/barni-taste113.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling114 {
+    background: url(../img/constructor/barni-taste114.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling115 {
+    background: url(../img/constructor/barni-taste115.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling116 {
+    background: url(../img/constructor/barni-taste116.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling117 {
+    background: url(../img/constructor/barni-taste117.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling118 {
+    background: url(../img/constructor/barni-taste118.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling119 {
+    background: url(../img/constructor/barni-taste119.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling120 {
+    background: url(../img/constructor/barni-taste120.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling121 {
+    background: url(../img/constructor/barni-taste121.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling122 {
+    background: url(../img/constructor/barni-taste122.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling123 {
+    background: url(../img/constructor/barni-taste123.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling124 {
+    background: url(../img/constructor/barni-taste124.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling125 {
+    background: url(../img/constructor/barni-taste125.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling126 {
+    background: url(../img/constructor/barni-taste126.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling127 {
+    background: url(../img/constructor/barni-taste127.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling2 {
+    background: url(../img/constructor/barni2.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling21 {
+    background: url(../img/constructor/barni-taste21.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling22 {
+    background: url(../img/constructor/barni-taste22.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling23 {
+    background: url(../img/constructor/barni-taste23.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling24 {
+    background: url(../img/constructor/barni-taste24.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling25 {
+    background: url(../img/constructor/barni-taste25.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling26 {
+    background: url(../img/constructor/barni-taste26.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling27 {
+    background: url(../img/constructor/barni-taste27.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling28 {
+    background: url(../img/constructor/barni-taste28.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling29 {
+    background: url(../img/constructor/barni-taste29.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling210 {
+    background: url(../img/constructor/barni-taste210.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling211 {
+    background: url(../img/constructor/barni-taste211.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling212 {
+    background: url(../img/constructor/barni-taste212.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling213 {
+    background: url(../img/constructor/barni-taste213.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling214 {
+    background: url(../img/constructor/barni-taste214.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling215 {
+    background: url(../img/constructor/barni-taste215.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling216 {
+    background: url(../img/constructor/barni-taste216.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling217 {
+    background: url(../img/constructor/barni-taste217.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling218 {
+    background: url(../img/constructor/barni-taste218.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling219 {
+    background: url(../img/constructor/barni-taste219.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling220 {
+    background: url(../img/constructor/barni-taste220.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling221 {
+    background: url(../img/constructor/barni-taste221.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling222 {
+    background: url(../img/constructor/barni-taste222.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling223 {
+    background: url(../img/constructor/barni-taste223.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling224 {
+    background: url(../img/constructor/barni-taste224.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling225 {
+    background: url(../img/constructor/barni-taste225.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling226 {
+    background: url(../img/constructor/barni-taste226.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling227 {
+    background: url(../img/constructor/barni-taste227.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling3 {
+    background: url(../img/constructor/barni3.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling31 {
+    background: url(../img/constructor/barni-taste31.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling32 {
+    background: url(../img/constructor/barni-taste32.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling33 {
+    background: url(../img/constructor/barni-taste33.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling34 {
+    background: url(../img/constructor/barni-taste34.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling35 {
+    background: url(../img/constructor/barni-taste35.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling36 {
+    background: url(../img/constructor/barni-taste36.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling37 {
+    background: url(../img/constructor/barni-taste37.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling38 {
+    background: url(../img/constructor/barni-taste38.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling39 {
+    background: url(../img/constructor/barni-taste39.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling310 {
+    background: url(../img/constructor/barni-taste310.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling311 {
+    background: url(../img/constructor/barni-taste311.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling312 {
+    background: url(../img/constructor/barni-taste312.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling313 {
+    background: url(../img/constructor/barni-taste313.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling314 {
+    background: url(../img/constructor/barni-taste314.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling315 {
+    background: url(../img/constructor/barni-taste315.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling316 {
+    background: url(../img/constructor/barni-taste316.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling317 {
+    background: url(../img/constructor/barni-taste317.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling318 {
+    background: url(../img/constructor/barni-taste318.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling319 {
+    background: url(../img/constructor/barni-taste319.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling320 {
+    background: url(../img/constructor/barni-taste320.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling321 {
+    background: url(../img/constructor/barni-taste321.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling322 {
+    background: url(../img/constructor/barni-taste322.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling323 {
+    background: url(../img/constructor/barni-taste323.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling324 {
+    background: url(../img/constructor/barni-taste324.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling325 {
+    background: url(../img/constructor/barni-taste325.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling326 {
+    background: url(../img/constructor/barni-taste326.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.filling327 {
+    background: url(../img/constructor/barni-taste327.png) 0 no-repeat;
+    background-size: contain;
+}
+
+.constructor-slide3 .prev-constructor-slide {
+    left: 0;
+}
+
+.constructor-slide3 .next-constructor-slide {
+    right: 0;
+}
+
+.remove-filling {
+    right: 70px;
+}
+
+.reg-taste {
+    position: relative;
+    min-height: 420px;
+    margin-top: 40px;
+    padding: 30px 0 0;
+}
+
+.reg-taste::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -300px;
+    right: -300px;
+    margin: auto;
+    width: 1176px;
+    height: 460px;
+    background: url(../img/reg-taste-bg.png) center 0 no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.reg-taste::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 316px;
+    height: 435px;
+    background: url(../img/barni-main.png) center no-repeat;
+    background-size: contain;
+}
+
+.reg-taste-form {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.reg-taste-form .select-wrap {
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.reg-taste-form .select-wrap .input-field {
+    max-width: 200px;
+    margin: 0;
+}
+
+.reg-taste-form .input-field input:not([type="checkbox"]), 
+.reg-taste-form .input-field textarea {
+    height: 60px;
+    box-shadow: inset 0px -3px 0px #E27F30;
+}
+
+.reg-taste-form .input-field textarea {
+    height: 120px;
+    padding-right: 20px;
+}
+
+.reg-taste-form .select2-container--default {
+    width: 100% !important;
+}
+
+.reg-taste-form .select2-container .select2-selection--single {
+    height: 60px;
+    padding: 20px 30px 19px 20px;
+    border: 1px solid #BEBEBE;
+    box-shadow: inset 0px -3px 0px #e27f30;
+}
+
+.reg-taste-form .select2-container--default .select2-selection--single .select2-selection__rendered,
+.reg-taste-form .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.reg-taste-form .select2-container--default .select2-search--dropdown .select2-search__field {
+    height: 40px;
+    font-size: 14px;
+}
+
+.reg-taste-form .btn {
+    max-width: 304px;
+    padding: 18px 25px 17px;
+}
+
+.reg-taste .constructor-slide-btn-wrapper {
+    top: 374px;
+    left: -620px;
+    right: 0;
+}
+
+.taste-result {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 350px;
+    height: 396px;
+}
+
+.reg-taste-popup .popup__wrap {
+    max-width: 700px;
+    background: url(../img/bg-popup-big.png) center 0 no-repeat;
+    background-size: cover;
+}
+
+.reg-taste-popup .popup__inner {
+    max-width: 680px;
+}
+
+.reg-taste-popup-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #E27F30;
+    margin-bottom: 25px;
+}
+
+.reg-taste-popup-title span {
+    font-size: 30px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.reg-taste-popup-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 454px;
+    width: 100%;
+    min-height: 146px;
+    margin: 0 auto 15px;
+    padding: 12px 40px 35px;
+    background: url(../img/reg-taste-text-bg.png) center no-repeat;
+    background-size: 100% 100%;
+}
+
+.reg-taste-popup .btn {
+    max-width: 300px;
+}
 
 
 .faq-container {
@@ -2606,16 +3814,6 @@ table td:nth-child(3) {
 
 .winners-page::before {
     top: 90px;
-}
-
-.page-subtitle {
-    position: relative;
-    font-family: Odds;
-    font-size: 22px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
-    margin-top: 15px;
 }
 
 .filters {
@@ -3564,37 +4762,6 @@ table td:nth-child(3) {
         text-overflow: ellipsis;
         max-width: 180px;
         margin: 0 0 8px;
-    }
-
-
-    .promocode-block {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: 184px;
-        margin: 0 auto 25px;
-    }
-
-    .tooltip-trigger {
-        top: -14px;
-        width: 19px;
-        height: 19px;
-    }
-
-    .tooltip {
-        top: -50px;
-        left: 0;
-        margin: auto;
-    }
-
-    .promocode-btn {
-        font-size: 0;
-        width: 16px;
-        height: 16px;
-        border: none;
-        border-radius: 0;
-        background: url(../img/copy-icon.svg) center no-repeat;
-        background-size: contain;
     }
 }
 
