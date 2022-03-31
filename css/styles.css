@@ -4055,6 +4055,14 @@ table td:nth-child(3) {
     margin: 70px auto 10px;
 }
 
+.animateMe {
+    opacity: 0;
+}
+
+.animateMe .animated {
+    opacity: 1;
+}
+
 @media (max-width: 1366px) {
     
 }
