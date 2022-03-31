@@ -3815,7 +3815,198 @@ table td:nth-child(3) {
     background-size: contain;
 }
 
+.winners-page {
+    padding-bottom: 0;
+}
 
+.winners-row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 340px;
+    padding: 0 15px;
+}
+
+.winners-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg-winners.jpg) center no-repeat;
+    background-size: 1920px 100%;
+}
+
+.winners-row:nth-child(2)::before {
+    display: none;
+}
+
+.winners-row::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    margin: auto;
+    width: 100%;
+    height: 95px;
+    background: url(../img/table-winners.png) center no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.winner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 328px;
+    width: 100%;
+    margin: 0 40px;
+    padding-left: 60px;
+}
+
+.winner-img {
+    position: absolute;
+    left: -75px;
+    width: 300px;
+    height: 354px;
+}
+
+.winner-img::before {
+    content: '';
+    position: absolute;
+    left: -200px;
+    right: -250px;
+    margin: auto;
+    width: 365px;
+    height: 339px;
+    background: url(../img/flour.png) center no-repeat;
+    background-size: contain;
+    z-index: 0;
+}
+
+.winner-img img {
+    position: relative;
+    z-index: 2;
+}
+
+.winner .winner-info {
+    position: relative;
+    width: 268px;
+    min-width: 268px;
+    height: 179px;
+    padding: 15px 40px 32px 80px;
+    text-align: center; 
+}
+
+.winner .winner-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 268px;
+    height: 179px;
+    background: url(../img/paper-yellow.png) center no-repeat;
+    background-size: contain;
+}
+
+.winner.yellow .winner-info::before {
+    background: url(../img/paper-yellow.png) center no-repeat;
+    background-size: contain;
+}
+
+.winner.orange .winner-info::before {
+    background: url(../img/paper-orange.png) center no-repeat;
+    background-size: contain;
+}
+
+.winner-title {
+    position: relative;
+    height: 80px;
+    margin-bottom: 7px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #003595;
+    z-index: 2;
+}
+
+.winner-name {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 2;
+}
+
+.winner-link {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 2;
+}
+
+.winner .tooltip {
+    top: 100px;
+    width: 360px;
+    height: auto;
+    padding: 20px 10px 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    z-index: 4;
+}
+
+.tooltip-winner-title {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #E27F30;
+    margin-bottom: 15px;
+}
+
+.tooltip-winner-title span {
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.tooltip-winner-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #003595;
+}
+
+
+.winners-row-last {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 140px;
+    padding: 0 15px;
+}
+
+.winners-row-last::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg-winners.jpg) center no-repeat;
+    background-size: 1920px;
+}
 
 .prizes-page::before {
     top: 80px;
@@ -3883,247 +4074,6 @@ table td:nth-child(3) {
     font-size: 20px;
     line-height: 1;
     color: #FFF236;
-}
-
-
-
-.winners-page::before {
-    top: 90px;
-}
-
-.filters {
-    display: flex;
-    justify-content: space-between;
-    -ms-align-items: center;
-    align-items: center;
-    max-width: 740px;
-    width: 100%;
-    margin: 100px auto 40px;
-}
-
-.date-filter {
-    position: relative;
-    max-width: 280px;
-    width: 100%;
-}
-
-.date-filter .select {
-    min-width: 180px;
-}
-
-.date-filter .select2-container--below {
-    z-index: 3;
-}
-
-.date-filter .select2.select2-container {
-    padding: 13px 10px 13px 40px;
-    background: #A1E2FF;
-    border-radius: 30px;
-}
-
-.date-filter .select2.select2-container--open {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.date-filter .select2.select2-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 15px;
-    bottom: 0;
-    width: 25px;
-    height: 22px;
-    margin: auto;
-    background: url(../img/calendar-icon.svg) center no-repeat;
-    background-size: contain;
-}
-
-.date-filter .select2-container .select2-selection--single {
-    display: flex;
-    -ms-align-items: center;
-    align-items: center;
-    background: transparent;
-    border-radius: 10px;
-    width: 100%;
-    height: 20px;
-    padding: 0 20px 0 10px;
-    border: 0;
-    border-bottom: 0;
-    box-shadow: none;
-}
-
-.date-filter .select2-container--default .select2-selection--single .select2-selection__placeholder {
-    color: #003595;
-    font-size: 16px;
-    font-weight: normal;
-}
-
-.date-filter .select2-container--default .select2-selection--single .select2-selection__rendered {
-    padding-right: 0;
-    color: #003595;
-    font-size: 16px;
-    font-weight: normal;
-}
-
-.date-filter .select2-container--open.select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: #003595;
-}
-
-.date-filter .select2-container--default .select2-selection--single .select2-selection__arrow {
-    top: 0;
-    right: 15px;
-    width: 18px;
-    height: 9px;
-    transition: all .2s linear;
-}
-
-.date-filter .select2-container--default .select2-selection--single .select2-selection__arrow b {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: none;
-    width: 18px;
-    height: 9px;
-    background: url(../img/arrow-down-filter.svg) center no-repeat;
-    background-size: contain;
-    margin: auto;
-}
-
-.date-filter .select2-container--open .select2-dropdown--below {
-    padding-top: 0;
-    top: 0;
-    background: #fff;
-    border: transparent;
-    border-radius: 0;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    overflow: hidden;
-    z-index: 2;
-}
-
-.date-filter .select2-results__option {
-    position: relative;
-    font-weight: normal;
-    font-size: 16px;
-    height: 40px;
-    padding: 13px 10px 13px 50px;
-}
-
-/*.date-filter .select2-results__option:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    height: 1px;
-    border: 1px dashed #1E402C;
-}*/
-
-.date-filter .select2-results__options {
-    color: #231F20;
-    font-weight: normal;
-    font-size: 12px;
-}
-
-.date-filter .select2-container--default .select2-results>.select2-results__options {
-    padding-top: 0;
-}
-
-.date-filter .select2-container--default .select2-results__option--highlighted[aria-selected],
-.date-filter .select2-container--default .select2-results__option[aria-selected=true] {
-    color: #231F20;
-}
-
-.phone-filter {
-    max-width: 280px;
-    margin: 0;
-}
-
-.phone-filter input:not([type="checkbox"]) {
-    font-size: 16px;
-    padding-left: 50px;
-    background: #A1E2FF;
-}
-
-.search {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    background: url(../img/search.svg) center no-repeat;
-    background-size: auto;
-    transition: all .2s linear;
-}
-
-.search:active {
-    box-shadow: none;
-}
-
-.winners {
-    position: relative;
-    max-width: 740px;
-    width: 100%;
-    min-height: 420px;
-    margin: auto;
-}
-
-.winners-table th {
-    font-family: Odds;
-    font-size: 16px;
-    line-height: 1;
-    color: #fff;
-}
-
-.winners-table tbody {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1;
-    color: #fff;
-}
-
-.prize-td {
-    position: relative;
-    display: flex;
-    -ms-align-items: center;
-    align-items: center;
-    min-height: 60px;
-    padding-left: 60px;
-}
-
-.winners-prize {
-    position: absolute;
-    left: 0;
-    display: flex;
-    -ms-align-items: center;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-}
-
-.winners-prize img {
-    position: absolute;
-    left: -50px;
-    right: -50px;
-    margin: auto;
-    width: 50px;
-    image-rendering: optimizequality;
-    image-rendering: -webkit-optimize-contrast;
-}
-
-.winners-prize-info {
-    max-width: 205px;
-    width: 100%;
 }
 
 
@@ -4216,6 +4166,10 @@ table td:nth-child(3) {
 
     .table-bottom.with-fruit::after {
         width: 1000px;
+    }
+
+    .winner {
+        margin: 0 10px;
     }
 }
 
@@ -4759,126 +4713,117 @@ table td:nth-child(3) {
         display: none;
     }
 
-
-
-    .prizes-page::before {
-        top: 50px;
+    .winners-page {
+        padding-bottom: 0;
+        background-size: 1920px;
     }
 
-    .prize-row {
+    .winners-row {
         flex-direction: column;
-    }
-
-    .winners-page::before {
-        top: 60px;
-    }
-
-    .page-subtitle {
-        font-size: 18px;
-        line-height: 1;
-        margin-top: 5px;
-    }
-
-    .filters {
-        flex-direction: column;
-        margin: 70px auto 40px;
-    }
-
-    .date-filter {
-        margin-bottom: 20px;
-    }
-
-    .phone-filter {
-        margin-bottom: 10px;
-    }
-
-    .winners-table th {
-        color: #FFF236;
-    }
-
-    .winners-table td {
-        min-width: 160px;
-        padding-top: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-    }
-
-    .winners-table td.mobile-visible {
-        display: table-cell;
-    }
-
-    .prize-td {
-        display: flex;
         align-items: center;
-        max-width: 180px;
-        min-height: 88px;
-        padding-left: 68px;
-        padding-right: 0;
+        height: auto;
     }
 
-    .winners-prize {
-        width: 60px;
-        height: 60px;
-        margin-right: 5px;
+    .winners-row::before,
+    .winners-row::after {
+        display: none;
     }
 
-    .winners-prize img {
-        width: 60px;
+    .winner {
+        height: 340px;
+        margin: 0 auto;
     }
 
-    .winners-prize-info {
-        max-width: 112px;
+    .winner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -500px;
+        right: -500px;
+        bottom: 0;
+        margin: auto;
+        width: 1000px;
+        height: 100%;
+        background: url(../img/bg-winners.jpg) center no-repeat;
+        background-size: cover;
     }
 
-    .winners-date {
-        font-size: 18px;
-        line-height: 1;
-        opacity: 0.5;
-        margin-bottom: 8px;
+    .winners-row:nth-child(2) .winner::before,
+    .winners-row:nth-child(3) .winner::before {
+        display: none;
     }
 
-    .winners-name {
-        font-size: 18px;
-        line-height: 1;
+    .winner::after {
+        content: '';
+        position: absolute;
+        left: -500px;
+        right: -500px;
+        bottom: -40px;
+        margin: auto;
+        width: 1000px;
+        height: 95px;
+        background: url(../img/table-winners.png) center no-repeat;
+        background-size: 100% 100%;
+        z-index: 1;
+    }
+
+    .winner.orange {
+        padding-left: 0;
+        padding-right: 60px;
+    }
+
+    .winner.orange .winner-img {
+        left: auto;
+        right: -75px;
+    }
+
+    .winner.orange .winner-img::before {
+        left: -250px;
+        right: -200px;
+    }
+
+    .winner.orange .winner-info {
+        padding: 15px 80px 32px 40px;
+    }
+
+    .winner.orange .winner-info::before {
+        transform: scale(-1, 1);
+    }
+
+    .winner-name {
+        width: 148px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 180px;
-        margin: 0 0 8px;
+    }
+
+    .winner .tooltip {
+        left: -250px;
+        right: -200px;
+        margin: auto;
+        width: 310px;
+    }
+
+    .winner.orange .tooltip {
+        right: -300px;
     }
 }
 
 @media (max-width: 375px) {
-    .inner-page::before {
-        background-size: cover;
-    }
+       
 }
 
 @media (max-width: 350px) {
-    .lk-table table td:nth-child(5) {
-        min-width: 90px;
+    .winner.orange .winner-info {
+        padding: 15px 80px 32px 40px;
+        margin-left: -40px;
     }
 
-    .winners-table td {
-        min-width: 130px;
+    .winner .tooltip {
+        left: -300px;
     }
 
-    .winners-name {
-        max-width: 130px;
-    }
-
-    .step-title {
-        font-size: 33px;
-    }
-
-    .magnit_card {
-        top: 74px;
-        right: -10px;
-        width: 62px;
-    }
-
-    .video-block .page-subtitle,
-    .map-block .page-subtitle {
-        font-size: 19px;
+    .winner.orange .tooltip {
+        right: -400px;
     }
 }
