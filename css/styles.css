@@ -3881,7 +3881,7 @@ table td:nth-child(3) {
     background-size: 1920px 100%;
 }
 
-.winners-row:nth-child(2)::before {
+.winners-row:nth-child(1)::before {
     display: none;
 }
 
@@ -4047,6 +4047,10 @@ table td:nth-child(3) {
     background-size: 1920px;
 }
 
+.winners-row .products-title {
+    position: relative;
+    margin: 70px auto 10px;
+}
 
 @media (max-width: 1366px) {
     
@@ -4933,8 +4937,8 @@ table td:nth-child(3) {
         background-size: cover;
     }
 
-    .winners-row:nth-child(2) .winner::before,
-    .winners-row:nth-child(3) .winner::before {
+    .winners-row:nth-child(1) .winner::before,
+    .winners-row:nth-child(2) .winner::before {
         display: none;
     }
 
@@ -4991,6 +4995,30 @@ table td:nth-child(3) {
 
     .winner.orange .tooltip {
         right: -300px;
+    }
+    
+    .winners-row-announce {
+        height: 340px;
+    }
+
+    .winners-row-announce::before,
+    .winners-row-announce::after {
+        display: block;
+    }
+
+    .winners-row-announce::after {
+        left: -500px;
+        right: -500px;
+        bottom: -40px;
+        margin: auto;
+        width: 1000px;
+        height: 95px;
+        background: url(../img/table-winners.png) center no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .winners-row .products-title {
+        margin: 10px auto;
     }
 }
 
