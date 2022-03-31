@@ -893,7 +893,7 @@ header {
 
 .step1 .step-img {
     width: 293px;
-    height: 291px;
+    height: 320px;
     background: url(../img/step1.png) center no-repeat;
     background-size: contain;
 }
@@ -904,7 +904,7 @@ header {
 
 .step2 .step-img {
     width: 318px;
-    height: 286px;
+    height: 330px;
     background: url(../img/step2.png) center no-repeat;
     background-size: contain;
 }
@@ -2163,7 +2163,6 @@ table td:nth-child(3) {
     padding: 50px 20px 20px;
     background: #fff;
     border-radius: 20px;
-    font-family: 'Iskra CYR';
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
@@ -4369,12 +4368,34 @@ table td:nth-child(3) {
 
     .step2 {
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        padding-top: 260px;
+    }
+
+    .step1 .step-img {
+        height: 305px;
+        background: url(../img/step1-mob.png) center no-repeat;
+        background-size: contain;
+    }
+
+    .step2 .step-img {
+        width: 328px;
+        height: 290px;
+        background: url(../img/step2-mob.png) center no-repeat;
+        background-size: contain;
+    }
+
+    .step3 .step-img {
+        top: 0;
+        width: 282px;
+        height: 270px;
+        background: url(../img/step3-mob.png) center no-repeat;
+        background-size: contain;
     }
 
     .video-block {
         position: relative;
-        margin: 130px auto;
+        margin: 90px auto 130px;
         padding: 0;
         background: none;
     }
@@ -4424,7 +4445,7 @@ table td:nth-child(3) {
         margin: auto;
         max-width: 311px;
         width: 100%;
-        height: 90px;
+        height: 100px;
         background: url(../img/figures-title.png) center no-repeat;
         background-size: contain;
     }
@@ -4532,6 +4553,10 @@ table td:nth-child(3) {
     .page-title2 {
         font-size: 34px;
         line-height: 1;
+    }
+
+    .lk-page {
+        background-size: cover;
     }
 
     .lk-wrapper {

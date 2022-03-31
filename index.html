@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="fonts/stylesheet.css">
 	<link rel="stylesheet" href="libs/select2/select2.min.css">
 	<link rel="stylesheet" href="libs/simplebar/simplebar.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<!--[if lte IE 9]>
     <script src="http://phpbbex.com/oldies/oldies.js" charset="utf-8"></script>
@@ -22,11 +23,11 @@
 		<div class="content">
 			<div class="flags-top"></div>
 			<section class="kv-block">
-				<div class="barni"></div>
-				<div class="gal"></div>
-				<div class="kv"></div>
+				<div class="barni animateMe" data-animation="fadeInLeft"></div>
+				<div class="gal animateMe" data-animation="fadeInRight" data-animation-delay="0.4s"></div>
+				<div class="kv animateMe" data-animation="fadeInUp" data-animation-delay="0.8s"></div>
 				<div class="table"></div>
-				<div class="main-btn-wrapper">
+				<div class="main-btn-wrapper animateMe" data-animation="fadeInUp" data-animation-delay="1s">
 					<a href="#!" class="main-btn pop-op" data-popup="auth"></a>
 				</div>
 			</section>
@@ -39,7 +40,6 @@
 							<a href="index.html" class="menu-link active">Главная</a>
 							<a href="constructor.html" class="menu-link">Создать вкус</a>
 							<a href="product.html" class="menu-link">Продукты Барни</a>
-							<a href="#!" class="menu-link">Опрос</a>
 						</div>
 						<div class="menu-right">
 							<a href="winners.html" class="menu-link">Виртуальная витрина</a>
@@ -54,22 +54,22 @@
 			<section class="main-page">
 				<div class="container">
 					<div class="steps">
-						<div class="step step1">
+						<div class="step step1 animateMe" data-animation="fadeInUp">
 							<div class="step-img"></div>
 						</div>
-						<div class="step step2">
+						<div class="step step2 animateMe" data-animation="fadeInUp" data-animation-delay="0.2s">
 							<div class="step-img"></div>
 							<div class="btn-wrapper">
 								<a href="#!" class="btn pop-op" data-popup="auth">Зарегистрировать код</a>
 							</div>
 						</div>
-						<div class="step step3">
+						<div class="step step3 animateMe" data-animation="fadeInUp" data-animation-delay="0.4s">
 							<div class="step-img"></div>
 						</div>
 					</div>
 					<a href="#video" class="arrow-down anchor desktop-visible">Посмотрите видео</a>
 				</div>
-				<div id="video" class="video-block">
+				<div id="video" class="video-block animateMe" data-animation="fadeIn">
                     <div class="youtube-wrapper">
                         <div class="youtube" data-embed="W6_VoOlEEvw">
                             <div class="play-button"></div>
@@ -78,7 +78,7 @@
 				</div>
 				<div class="main-figures-block">
 					<div class="main-figures">
-						<div class="main-figure figure1">
+						<div class="main-figure figure1 animateMe" data-animation="fadeInUp">
 							<div class="main-figure-img">
 								<img srcset="img/figures/figure1.png 1x, img/figures/figure1@2x.png 2x" alt="">
 							</div>
@@ -86,7 +86,7 @@
 							<div class="main-figure-count">20 000</div>
 							<div class="main-figure-text">фигурок</div>
 						</div>
-						<div class="main-figure figure2">
+						<div class="main-figure figure2 animateMe" data-animation="fadeInUp" data-animation-delay="0.4s">
 							<div class="main-figure-img">
 								<img srcset="img/figures/figure2.png 1x, img/figures/figure2@2x.png 2x" alt="">
 							</div>
@@ -94,7 +94,7 @@
 							<div class="main-figure-count">20 000</div>
 							<div class="main-figure-text">фигурок</div>
 						</div>
-						<div class="main-figure figure3">
+						<div class="main-figure figure3 animateMe" data-animation="fadeInUp" data-animation-delay="0.6s">
 							<div class="main-figure-img">
 								<img srcset="img/figures/figure3.png 1x, img/figures/figure3@2x.png 2x" alt="">
 							</div>
@@ -102,7 +102,7 @@
 							<div class="main-figure-count">20 000</div>
 							<div class="main-figure-text">фигурок</div>
 						</div>
-						<div class="main-figure figure4">
+						<div class="main-figure figure4 animateMe" data-animation="fadeInUp" data-animation-delay="0.8s">
 							<div class="main-figure-img">
 								<img srcset="img/figures/figure4.png 1x, img/figures/figure4@2x.png 2x" alt="">
 							</div>
@@ -111,7 +111,7 @@
 							<div class="main-figure-text">фигурок</div>
 						</div>
 					</div>
-					<div class="btn-wrapper">
+					<div class="btn-wrapper animateMe" data-animation="fadeInUp">
 						<a href="#!" class="btn btn-blue pop-op" data-popup="auth">Получить фигурку</a>
 					</div>
 				</div>
@@ -290,6 +290,7 @@
 	<script src="libs/jquery.inputmask.min.js"></script>
 	<script src="libs/jquery.countdown.min.js"></script>
 	<script src="libs/slick.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
