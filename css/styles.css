@@ -4424,7 +4424,7 @@ table td:nth-child(3) {
     }
 
     .youtube-wrapper {
-        position: relative
+        position: relative;
         max-width: 375px;
         z-index: 1
     }
