@@ -3533,7 +3533,7 @@ table td:nth-child(3) {
     max-width: 420px;
     width: 100%;
     margin: 0 auto;
-    z-index: 2;
+    z-index: 3;
 }
 
 .focus-input-field::before {
@@ -4831,8 +4831,8 @@ table td:nth-child(3) {
         margin: auto;
         width: 1000px;
         height: 360px;
-        background: url(../img/bg-figures-mob.jpg) center 0 no-repeat;
-        background-size: cover;
+        background: url(../img/bg-figures-mob.jpg) center 0 repeat;
+        background-size: 375px;
     }
 
     .reg-taste::after {
