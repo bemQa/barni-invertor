@@ -263,14 +263,23 @@ $(document).ready(function () {
     });
 
     if($('.constructor-page').length) {
-        $('.taste-slider').slick({
+        $('.taste-slider').not('.filling-slider').slick({
             dots: false,
             arrows: true,
             infinite: true,
             speed: 300,
             slidesToShow: 5,
             slidesToScroll: 1,
-            centerMode: true
+            centerMode: true,
+            responsive: [
+                {
+                  breakpoint: 1000,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+            ]
+
         }); 
 
         if($('#dough').val() != '') {
@@ -348,19 +357,29 @@ $(document).ready(function () {
             if(slide != '') {
                 $(this).closest('.constructor-slide').hide();
                 $(slide).show();
-                $(slide + ' .taste-slider').slick('reinit');
-                // if(slide == '.constructor-slide3-4') {
-                //     $(slide + ' .taste-slider').slick('destroy');
-                //     $(slide + ' .taste-slider').slick({
-                //         dots: false,
-                //         arrows: true,
-                //         infinite: false,
-                //         speed: 300,
-                //         slidesToShow: 5,
-                //         slidesToScroll: 1,
-                //         centerMode: true
-                //     }); 
-                // }
+            }
+        });
+
+        $('.filling-group').one('click', function(e) {
+            let slide = $(this).data('slide');
+            if(slide != '') {
+                $(slide + ' .filling-slider').slick({
+                    dots: false,
+                    arrows: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    responsive: [
+                        {
+                          breakpoint: 1000,
+                          settings: {
+                            slidesToShow: 1
+                          }
+                        }
+                    ]
+                });  
             }
         });
 

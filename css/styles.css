@@ -2390,6 +2390,15 @@ table td:nth-child(3) {
     padding-bottom: 100px;
 }
 
+.constructor-page .container {
+    z-index: auto;
+}
+
+.constructor-slides {
+    position: relative;
+    z-index: 2;
+}
+
 .page-subtitle {
     position: relative;
     font-size: 26px;
@@ -2672,7 +2681,7 @@ table td:nth-child(3) {
     cursor: pointer;
 }
 
-.filling-group::before {
+/*.filling-group::before {
     content: '';
     position: absolute;
     top: 0;
@@ -2685,7 +2694,7 @@ table td:nth-child(3) {
     background: url(../img/filling-group-bg.png) center no-repeat;
     background-size: contain;
     z-index: 0;
-}
+}*/
 
 .filling-group-img {
     position: relative;
@@ -3487,6 +3496,7 @@ table td:nth-child(3) {
     position: relative;
     min-height: 420px;
     margin-top: 40px;
+    margin-bottom: -30px;
     padding: 30px 0 0;
 }
 
@@ -3501,7 +3511,7 @@ table td:nth-child(3) {
     height: 460px;
     background: url(../img/reg-taste-bg.png) center 0 no-repeat;
     background-size: 100% 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .reg-taste::after {
@@ -3516,9 +3526,37 @@ table td:nth-child(3) {
 }
 
 .reg-taste-form {
+    position: relative;
     max-width: 420px;
     width: 100%;
     margin: 0 auto;
+    z-index: 2;
+}
+
+.focus-input-field::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -35px;
+    bottom: 0;
+    margin: auto;
+    width: 27px;
+    height: 25px;
+    background: url(../img/arrow-focus-left.svg) center no-repeat;
+    background-size: contain;
+}
+
+.focus-input-field::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -35px;
+    bottom: 0;
+    margin: auto;
+    width: 27px;
+    height: 25px;
+    background: url(../img/arrow-focus-right.svg) center no-repeat;
+    background-size: contain;
 }
 
 .reg-taste-form .select-wrap {
@@ -3570,9 +3608,10 @@ table td:nth-child(3) {
 }
 
 .reg-taste .constructor-slide-btn-wrapper {
-    top: 374px;
+    top: 394px;
     left: -620px;
     right: 0;
+    z-index: 2;
 }
 
 .taste-result {
@@ -3581,6 +3620,7 @@ table td:nth-child(3) {
     right: 0;
     width: 350px;
     height: 396px;
+    z-index: 2;
 }
 
 .reg-taste-popup .popup__wrap {
@@ -3985,7 +4025,6 @@ table td:nth-child(3) {
     color: #003595;
 }
 
-
 .winners-row-last {
     position: relative;
     display: flex;
@@ -4006,74 +4045,6 @@ table td:nth-child(3) {
     height: 100%;
     background: url(../img/bg-winners.jpg) center no-repeat;
     background-size: 1920px;
-}
-
-.prizes-page::before {
-    top: 80px;
-}
-
-.prizes {
-    margin-top: 138px;
-}
-
-.prizes-title {
-    font-family: Odds;
-    font-size: 26px;
-    line-height: 31px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFF236;
-}
-
-.prize-row {
-    display: flex;
-    justify-content: center;
-}
-
-.prize-row:nth-child(2) {
-    margin-bottom: 55px;
-}
-
-.prize {
-    margin: 20px 5px;
-}
-
-.prize-img {
-    position: relative;
-    display: flex;
-    -ms-align-items: center;
-    align-items: center;
-    justify-content: center;
-    width: 275px;
-    height: 240px;
-    margin: 10px auto 15px;
-}
-
-.prize-img img {
-    position: absolute;
-    left: -100px;
-    right: -100px;
-    margin: auto;
-    image-rendering: optimizequality;
-    image-rendering: -webkit-optimize-contrast;
-}
-
-.prize-name {
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 24px;
-    text-align: center;
-}
-
-.how-get-link-wrapper {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.how-get-link {
-    font-size: 20px;
-    line-height: 1;
-    color: #FFF236;
 }
 
 
@@ -4173,6 +4144,16 @@ table td:nth-child(3) {
     }
 }
 
+@media (max-width: 1024px) {
+    .reg-taste::after {
+        left: -50px;
+    }
+
+    .taste-result {
+        right: -50px;
+    }
+}
+
 @media (max-width: 1000px) {
     .container {
         max-width: 375px;
@@ -4186,7 +4167,7 @@ table td:nth-child(3) {
     header,
     .main-header {
         top: 48px;
-        z-index: 2;
+        z-index: 5;
     }
 
     .logo,
@@ -4524,7 +4505,9 @@ table td:nth-child(3) {
 
     .inner-page {
         min-height: auto;
+        padding-top: 130px;
         padding-bottom: 60px;
+        background-size: 1920px;
     }
 
     .page-title,
@@ -4648,6 +4631,7 @@ table td:nth-child(3) {
     }
 
     .table-bottom {
+        top: -80px;
         height: 124px;
     }
 
@@ -4665,7 +4649,204 @@ table td:nth-child(3) {
         margin: 0;
     }
 
-    /* конструктор мобилка */
+    .constructor-page {
+        min-height: 720px;
+        padding-bottom: 100px;
+        margin-bottom: 100px;
+    }
+
+    .constructor-footer .table-bottom {
+        top: -180px;
+    }
+
+    .page-subtitle {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .constructor-slide {
+        height: 406px;
+    }
+
+    .constructor-slide1 {
+        padding-bottom: 120px;
+    }
+
+    .taste-slider {
+        max-width: 320px;
+        margin: 10px auto 0;
+    }
+
+    .taste-slide {
+        width: 100%;
+    }
+
+    .dough {
+        width: 271px;
+        height: 217px;
+    }
+
+    .remove-dough {
+        top: 130px;
+    }
+
+    .constructor-slide-btn-wrapper,
+    .constructor-slide2 .next-constructor-slide {
+        top: 580px;
+        left: 0;
+        right: 0;
+    }
+
+    .constructor-slide2 .prev-constructor-slide,
+    .constructor-slide3 .prev-constructor-slide {
+        top: 670px;
+        left: 0;
+        right: 0;
+    }
+
+    .constructor-slide2 .prev-constructor-slide .btn,
+    .constructor-slide3 .prev-constructor-slide .btn,
+    .reg-taste .constructor-slide-btn-wrapper .btn {
+        height: auto;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+        border: none;
+        text-decoration: underline;
+    }
+
+    .filling-groups {
+        flex-wrap: wrap;
+        max-width: 345px;
+        margin-bottom: 0;
+    }
+
+    .filling-group {
+        width: 120px;
+        height: 150px;
+        padding: 0;
+        margin: 10px auto;
+    }
+
+    .filling-group-img {
+        height: 130px;
+    }
+
+    .filling-group-name {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .filling {
+        bottom: -80px;
+        /*width: 270px;*/
+        width: 220px;
+        /*height: 242px;*/
+        height: 190px;
+    }
+
+    .constructor-slide3 {
+        padding-bottom: 120px;
+    }
+
+    .taste-slide:not(.slick-active) {
+        opacity: 0;
+    }
+
+    .constructor-slide3 .page-subtitle {
+        font-size: 18px;
+    }
+
+    .remove-filling {
+        right: 0;
+    }
+
+    .reg-taste {
+        height: 690px;
+        min-height: auto;
+        margin-top: 30px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .reg-taste::before {
+        content: '';
+        position: absolute;
+        top: auto;
+        left: -500px;
+        right: -500px;
+        bottom: -50px;
+        margin: auto;
+        width: 1000px;
+        height: 360px;
+        background: url(../img/bg-figures-mob.jpg) center 0 no-repeat;
+        background-size: cover;
+    }
+
+    .reg-taste::after {
+        display: none;
+    }
+
+    .reg-taste-form {
+        max-width: 340px;
+    }
+
+    .reg-taste-form .select-wrap {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .reg-taste-form .select-wrap .input-field {
+        max-width: 100%;
+        margin: 0 auto 10px;
+    }
+
+    .focus-input-field::before,
+    .focus-input-field::after {
+        display: none;
+    }
+
+    .reg-taste-form .input-field textarea {
+        height: 190px;
+    }
+
+    .reg-taste-form .input-field.mb30 {
+        margin-bottom: 300px;
+    }
+
+    .taste-result {
+        top: 455px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 300px;
+        height: 339px;
+    }
+
+    .reg-taste .constructor-slide-btn-wrapper {
+        top: auto;
+        bottom: -200px;
+        left: 0;
+        right: 0;
+    }
+
+    .reg-taste-popup .popup__wrap {
+        max-width: 340px;
+        background: url(../img/bg-popup.png) center 0 no-repeat;
+        background-size: cover;
+    }
+
+    .reg-taste-popup .popup__inner {
+        max-width: 300px;
+    }
+
+    .reg-taste-popup-text {
+        max-width: 300px;
+        min-height: 210px;
+        padding: 12px 30px 35px;
+        background: url(../img/reg-taste-text-bg-mob.png) center no-repeat;
+        background-size: 100% 100%;
+    }
 
     .faq-container {
         margin: 35px auto 0;
@@ -4698,6 +4879,10 @@ table td:nth-child(3) {
 
     .feedback-form {
         max-width: 290px;
+    }
+
+    .product-page {
+        background-size: cover;
     }
 
     .product-row,
