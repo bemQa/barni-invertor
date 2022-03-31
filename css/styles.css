@@ -1843,23 +1843,24 @@ table td:nth-child(3) {
 }
 
 .lk-taste-img-wrapper {
+    width: 164px;
     text-align: center;
 }
 
 .lk-taste-img {
     position: relative;
-    width: 164px;
+    /*width: 164px;*/
     height: 145px;
     margin-bottom: 10px;
 }
 
 .lk-taste-img img {
     position: absolute;
-    bottom: -20px;
+    bottom: -45px;
     left: -50px;
     right: -50px;
     margin: auto;
-    width: 164px;
+    min-width: 243px;
 }
 
 .lk-taste-link {
@@ -1870,6 +1871,7 @@ table td:nth-child(3) {
     line-height: 16px;
     text-align: center;
     color: #949494;
+    z-index: 1;
 }
 
 .lk-taste-link.wait {
@@ -1977,9 +1979,11 @@ table td:nth-child(3) {
 }
 
 .lk-taste-share {
+    position: relative;
     display: flex;
     align-items: center;
     margin-top: 10px;
+    z-index: 1;
 }
 
 .popup .lk-taste-share {
@@ -4095,7 +4099,11 @@ table td:nth-child(3) {
         flex-direction: column;
         max-width: 290px;
         height: 314px;
-        margin: 50px auto 20px;
+        margin: 60px auto 20px;
+    }
+
+    .lk-taste-img-wrapper {
+        width: 100%;
     }
 
     .lk-taste-img {
@@ -4104,7 +4112,9 @@ table td:nth-child(3) {
     }
 
     .lk-taste-img img {
-        bottom: -25px;
+        bottom: -35px;
+        min-width: 220px;
+        max-width: 220px;
     }
 
     .lk-taste-link {
@@ -4118,6 +4128,10 @@ table td:nth-child(3) {
 
     .lk-taste-link.success {
         width: 80px;
+    }
+
+    .lk-taste-info {
+        margin: 0 auto;
     }
 
     .lk-taste-name {
