@@ -856,6 +856,7 @@ header {
 }
 
 .main-page {
+    position: relative;
     padding-top: 60px;
     background: url(../img/bg-main.jpg) center 0 no-repeat;
     background-size: cover;
@@ -4063,6 +4064,280 @@ table td:nth-child(3) {
     opacity: 1;
 }
 
+.garlands-main-top {
+    position: absolute;
+    top: 15px;
+    left: -500px;
+    right: -500px;
+    margin: auto;
+    width: 1430px;
+    height: 96px;
+    z-index: 1;
+}
+
+.garland {
+    position: absolute;
+    transition: all .2s linear;
+}
+
+.garland1 {
+    top: 0;
+    left: 0;
+    width: 288px;
+    height: 96px;
+    background: url(../img/garland-main1.png) center no-repeat;
+    background-size: contain;
+    animation: garland1 4s infinite linear;
+}
+
+.garland2 {
+    top: 6px;
+    left: 323px;
+    width: 288px;
+    height: 96px;
+    background: url(../img/garland-main2.png) center no-repeat;
+    background-size: contain;
+    animation: garland2 4s infinite linear;
+}
+
+.garland3 {
+    top: 6px;
+    right: 363px;
+    width: 285px;
+    height: 96px;
+    background: url(../img/garland-main3.png) center no-repeat;
+    background-size: contain;
+    animation: garland3 4s infinite linear;
+}
+
+.garland4 {
+    top: 0;
+    right: 0;
+    width: 288px;
+    height: 96px;
+    background: url(../img/garland-main4.png) center no-repeat;
+    background-size: contain;
+    animation: garland4 4s infinite linear;
+}
+
+.garlands-main-middle {
+    position: absolute;
+    top: 47px;
+    left: -500px;
+    right: -550px;
+    margin: auto;
+    width: 825px;
+    height: 96px;
+    z-index: 2;
+}
+
+.garland5 {
+    top: 0;
+    left: 0;
+    width: 288px;
+    height: 96px;
+    background: url(../img/garland-main5.png) center no-repeat;
+    background-size: contain;
+    animation: garland5 4s infinite linear;
+}
+
+.garland6 {
+    top: 0;
+    right: 0;
+    width: 286px;
+    height: 96px;
+    background: url(../img/garland-main6.png) center no-repeat;
+    background-size: contain;
+    animation: garland6 4s infinite linear;
+}
+
+@keyframes garland1 {
+    0% {
+        background: url(../img/garland-main1.png) center no-repeat;
+        background-size: contain;
+    }
+
+    25% {
+        background: url(../img/garland-main1.png) center no-repeat;
+        background-size: contain;
+    } 
+
+    50% {
+        background: url(../img/garland-main1-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    75% {
+        background: url(../img/garland-main1-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    100% {
+        background: url(../img/garland-main1.png) center no-repeat;
+        background-size: contain;
+    }
+}
+
+@keyframes garland2 {
+    0% {
+        background: url(../img/garland-main2.png) center no-repeat;
+        background-size: contain;
+    }
+
+    25% {
+        background: url(../img/garland-main2.png) center no-repeat;
+        background-size: contain;
+    } 
+
+    50% {
+        background: url(../img/garland-main2-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    75% {
+        background: url(../img/garland-main2-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    100% {
+        background: url(../img/garland-main2.png) center no-repeat;
+        background-size: contain;
+    }
+}
+
+@keyframes garland3 {
+    0% {
+        background: url(../img/garland-main3.png) center no-repeat;
+        background-size: contain;
+    }
+
+    25% {
+        background: url(../img/garland-main3.png) center no-repeat;
+        background-size: contain;
+    } 
+
+    50% {
+        background: url(../img/garland-main3-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    75% {
+        background: url(../img/garland-main3-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    100% {
+        background: url(../img/garland-main3.png) center no-repeat;
+        background-size: contain;
+    }
+}
+
+@keyframes garland4 {
+    0% {
+        background: url(../img/garland-main4.png) center no-repeat;
+        background-size: contain;
+    }
+
+    25% {
+        background: url(../img/garland-main4.png) center no-repeat;
+        background-size: contain;
+    } 
+
+    50% {
+        background: url(../img/garland-main4-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    75% {
+        background: url(../img/garland-main4-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    100% {
+        background: url(../img/garland-main4.png) center no-repeat;
+        background-size: contain;
+    }
+}
+
+@keyframes garland5 {
+    0% {
+        background: url(../img/garland-main5.png) center no-repeat;
+        background-size: contain;
+    }
+
+    25% {
+        background: url(../img/garland-main5.png) center no-repeat;
+        background-size: contain;
+    } 
+
+    50% {
+        background: url(../img/garland-main5-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    75% {
+        background: url(../img/garland-main5-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    100% {
+        background: url(../img/garland-main5.png) center no-repeat;
+        background-size: contain;
+    }
+}
+
+@keyframes garland6 {
+    0% {
+        background: url(../img/garland-main6.png) center no-repeat;
+        background-size: contain;
+    }
+
+    25% {
+        background: url(../img/garland-main6.png) center no-repeat;
+        background-size: contain;
+    } 
+
+    50% {
+        background: url(../img/garland-main6-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    75% {
+        background: url(../img/garland-main6-active.png) center no-repeat;
+        background-size: contain;
+    }
+
+    100% {
+        background: url(../img/garland-main6.png) center no-repeat;
+        background-size: contain;
+    }
+}
+
+.garlands-inner-top {
+    position: absolute;
+    top: 22px;
+    left: -500px;
+    right: -500px;
+    margin: auto;
+    width: 680px;
+    height: 84px;
+    z-index: 1;
+}
+
+.garlands-inner-top .garland5 {
+    left: auto;
+    right: 0;
+    width: 252px;
+    height: 84px;
+}
+
+.garlands-inner-top .garland6 {
+    right: auto;
+    left: 0;
+    width: 252px;
+    height: 84px;
+}
+
 @media (max-width: 1366px) {
     
 }
@@ -5067,6 +5342,174 @@ table td:nth-child(3) {
 
     .winners-row .products-title {
         margin: 10px auto;
+    }
+
+    .garlands-main-top {
+        top: 145px;
+        width: 100%;
+        min-width: 590px;
+        height: 135px;
+        z-index: auto;
+    }
+
+    .garland1 {
+        top: 0;
+        left: 0;
+        width: 219px;
+        height: 135px;
+        background: url(../img/garland-main1-mob.png) center no-repeat;
+        background-size: contain;
+        animation: garland1 4s infinite linear;
+    }
+
+    .garland2 {
+        top: 0;
+        left: auto;
+        right: 0;
+        width: 220px;
+        height: 135px;
+        background: url(../img/garland-main2-mob.png) center no-repeat;
+        background-size: contain;
+        animation: garland2 4s infinite linear;
+    }
+
+    .garlands-main-middle {
+        top: 40px;
+        left: -500px;
+        right: -500px;
+        width: 100%;
+        min-width: 500px;
+        height: 86px;
+        z-index: auto;
+    }
+
+    .garlands-main-middle .garland5 {
+        top: 0;
+        left: 0;
+        width: 216px;
+        height: 86px;
+        background: url(../img/garland-main5-mob.png) center no-repeat;
+        background-size: contain;
+        animation: garland5 4s infinite linear;
+    }
+
+    .garlands-main-middle .garland6 {
+        top: 0;
+        left: auto;
+        right: 0;
+        width: 215px;
+        height: 86px;
+        background: url(../img/garland-main6-mob.png) center no-repeat;
+        background-size: contain;
+        animation: garland6 4s infinite linear;
+    }
+
+    @keyframes garland1 {
+        0% {
+            background: url(../img/garland-main1-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        25% {
+            background: url(../img/garland-main1-mob.png) center no-repeat;
+            background-size: contain;
+        } 
+
+        50% {
+            background: url(../img/garland-main1-active-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        75% {
+            background: url(../img/garland-main1-active-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        100% {
+            background: url(../img/garland-main1-mob.png) center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    @keyframes garland2 {
+        0% {
+            background: url(../img/garland-main2-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        25% {
+            background: url(../img/garland-main2-mob.png) center no-repeat;
+            background-size: contain;
+        } 
+
+        50% {
+            background: url(../img/garland-main2-active-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        75% {
+            background: url(../img/garland-main2-active-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        100% {
+            background: url(../img/garland-main2-mob.png) center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    @keyframes garland5 {
+        0% {
+            background: url(../img/garland-main5-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        25% {
+            background: url(../img/garland-main5-mob.png) center no-repeat;
+            background-size: contain;
+        } 
+
+        50% {
+            background: url(../img/garland-main5-active-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        75% {
+            background: url(../img/garland-main5-active-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        100% {
+            background: url(../img/garland-main5-mob.png) center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    @keyframes garland6 {
+        0% {
+            background: url(../img/garland-main6-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        25% {
+            background: url(../img/garland-main6-mob.png) center no-repeat;
+            background-size: contain;
+        } 
+
+        50% {
+            background: url(../img/garland-main6-active-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        75% {
+            background: url(../img/garland-main6-active-mob.png) center no-repeat;
+            background-size: contain;
+        }
+
+        100% {
+            background: url(../img/garland-main6-mob.png) center no-repeat;
+            background-size: contain;
+        }
     }
 }
 
