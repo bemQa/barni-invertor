@@ -4338,6 +4338,167 @@ table td:nth-child(3) {
     height: 84px;
 }
 
+.cookies-page {
+    padding-bottom: 220px;
+    color: #003595;
+}
+
+.cookies-page p {
+    font-size: 16px;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.main-cookie-h3 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.cookie-text-ul {
+    font-size: 16px;
+    line-height: 1.15;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.cookie-text-ul li {
+    margin: 20px 0;
+}
+
+.main-cookie-h2 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.error-page {
+    padding-bottom: 220px;
+}
+
+.error-title {
+    position: relative;
+    font-family: Odds;
+    font-size: 292px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #003595;
+    text-shadow: 0px -2px 0px #fff, 2px 0px 0px #fff, 0px 2px 0px #fff, -2px 0px 0px #fff, 0px -4px 0px #fff, 4px 0px 0px #fff, 0px 4px 0px #fff, -4px 0px 0px #fff, -4px 4px 0px #fff, 4px 4px 0px #fff, 4px -4px 0px #fff, -4px -4px 0px #fff;
+}
+
+.error-desc {
+    font-family: Odds;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #003595;
+    text-shadow: 0px -2px 0px #fff, 2px 0px 0px #fff, 0px 2px 0px #fff, -2px 0px 0px #fff, -2px 2px 0px #fff, 2px 2px 0px #fff, 2px -2px 0px #fff, -2px -2px 0px #fff;
+    margin-bottom: 10px;
+}
+
+.error-text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.error-page .btn-wrapper {
+    margin-top: 20px;
+}
+
+.constructor-hints {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 53 149 / 50%);
+    z-index: 999;
+}
+
+.hint {
+    position: absolute;
+    top: 550px;
+    left: -700px;
+    right: 0;
+    margin: auto;
+    width: 257px;
+}
+
+.hint-text {
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.hint1 .hint-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 72px;
+    height: 41px;
+    background: url(../img/arrow-hint1.svg) center no-repeat;
+    background-size: contain;
+}
+
+.hint2 .hint-text::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 66px;
+    height: 64px;
+    background: url(../img/arrow-hint2.svg) center no-repeat;
+    background-size: contain;
+}
+
+.close-hint {
+    position: relative;
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF
+}
+
+.close-hint::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 21px;
+    height: 21px;
+    background: url(../img/close-hint.svg) center no-repeat;
+    background-size: contain;
+}
+
+.whisk-decor {
+    position: absolute;
+    bottom: -175px;
+    left: -500px;
+    right: 0;
+    margin: auto;
+    width: 375px;
+    height: 315px;
+    background: url(../img/whisk-decor.png) center no-repeat;
+    background-size: contain;
+}
+
 @media (max-width: 1366px) {
     
 }
@@ -5510,6 +5671,62 @@ table td:nth-child(3) {
             background: url(../img/garland-main6-mob.png) center no-repeat;
             background-size: contain;
         }
+    }
+
+    .cookies-page {
+        background-size: cover;
+    }
+
+    .cookies-page p {
+        font-size: 14px;
+    }
+
+    .cookie-text-ul {
+        font-size: 14px;
+    }
+
+    .error-title {
+        font-size: 200px;
+    }
+
+    .constructor-hints {
+        width: 310px;
+        height: 270px;
+        padding: 35px 15px 25px;
+        background: rgb(0 53 149 / 90%);
+        border-radius: 30px;
+    }
+
+    .hint {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .hint-text {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .hint-text::after {
+        display: none;
+    }
+
+    .close-hint {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        width: 187px;
+        margin: auto;
+        font-size: 16px;
+        line-height: 19px;
     }
 }
 

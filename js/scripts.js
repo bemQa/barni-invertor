@@ -314,6 +314,16 @@ $(document).ready(function () {
             $('.constructor-slide3').attr('data-dough-color', dough_color);
             $('.constructor-slide3 .taste-element').attr('data-dough-color', dough_color);
             $('.constructor-slide3 .filling').removeClass().addClass('filling filling'+ dough_color);
+
+            if(getCookie('hint2') != '1') {
+                $('.constructor-hints').fadeIn();
+                setTimeout(function(){
+                    $('.hint2').fadeIn();
+                }, 2000);
+            }
+            else {
+                $('.hint2').remove();
+            }
         });
 
         $('.remove-dough').click(function(e) {
@@ -431,6 +441,35 @@ $(document).ready(function () {
     }
 
     scrollWaypointInit($('.animateMe'));
+
+    // set cookie
+    if(getCookie('hint1') != '1') {
+        setTimeout(function(){
+            $('.constructor-hints').fadeIn(600);
+            setTimeout(function(){
+                $('.hint1').fadeIn();
+            }, 1000);
+        }, 400);
+    }
+    else {
+        $('.hint1').remove();
+    }
+
+    $('.close-hint1').click(function(){
+        setCookie('hint1', '1', {'max-age': 31536000});
+        $('.constructor-hints').fadeOut();
+        $('.hint1').remove();
+    });
+
+    if(getCookie('hint2') == '1') {
+        $('.hint2').remove();
+    }
+
+    $('.close-hint2').click(function(){
+        setCookie('hint2', '1', {'max-age': 31536000});
+        $('.constructor-hints').fadeOut();
+        $('.hint2').remove();
+    });
 });
 
 ( function() {
@@ -483,4 +522,36 @@ function scrollWaypointInit(items, trigger) {
             offset: '80%'
         });
     });
+}
+
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function setCookie(name, value, options = {}) {
+
+    options = {
+        path: '/',
+        // при необходимости добавьте другие значения по умолчанию
+        ...options
+    };
+
+    if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
+    }
+
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+    for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+            updatedCookie += "=" + optionValue;
+        }
+    }
+
+    document.cookie = updatedCookie;
 }
