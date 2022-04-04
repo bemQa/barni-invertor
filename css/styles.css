@@ -717,6 +717,11 @@ body {
     transition: all .2s linear;
 }
 
+.main-btn.more::before {
+    background: url(../img/main-btn-more-hover.png) center no-repeat;
+    background-size: contain;
+}
+
 .main-btn::after {
     content: '';
     position: absolute;
@@ -732,6 +737,11 @@ body {
     transition: all .2s linear;
 }
 
+.main-btn.more::after {
+    background: url(../img/main-btn-more.png) center no-repeat;
+    background-size: contain;
+}
+
 .main-btn:hover::after,
 .main-btn:active::after {
     opacity: 0;
@@ -739,6 +749,11 @@ body {
 
 .main-btn:active::before {
     background: url(../img/main-btn-active.png) center no-repeat;
+    background-size: contain;
+}
+
+.main-btn.more:active::before {
+    background: url(../img/main-btn-more-active.png) center no-repeat;
     background-size: contain;
 }
 
@@ -4497,6 +4512,161 @@ table td:nth-child(3) {
     height: 315px;
     background: url(../img/whisk-decor.png) center no-repeat;
     background-size: contain;
+}
+
+.constructor-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 53 149 / 50%);
+    z-index: 999;
+}
+
+.dough-animation {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 142px;
+    height: 142px;
+}
+
+.animate .dough-animation {
+    animation: doughIn 1s linear both, doughOut 1s linear 6.5s forwards;
+}
+
+@keyframes doughIn {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes doughOut {
+    0% {
+        top: 300px;
+        transform: scale(1.2);
+    }
+
+    100% {
+        top: 500px;
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.whisk {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2500px;
+    left: -300px;
+    right: 0;
+    margin: auto;
+    width: 374px;
+    height: 100px;
+    transition: all .2s linear;
+}
+
+.animate .whisk {
+    animation: whiskIn 2s linear both, whiskOut 2s linear 7s forwards;
+}
+
+.whisk::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -500px;
+    right: -500px;
+    margin: auto;
+    width: 374px;
+    height: 315px;
+    background: url(../img/whisk.png) center no-repeat;
+    background-size: contain;
+}
+
+@keyframes whiskIn {
+    0% {
+        left: -2500px;
+    }
+
+    100% {
+        left: -300px;
+    }
+}
+
+@keyframes whiskOut {
+    0% {
+        left: -300px;
+    }
+
+    100% {
+        left: -2500px;
+    }
+}
+
+.whisk-roround {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.animate .whisk-roround {
+    animation: whisk-roround 2s linear 2.5s infinite forwards;
+    animation-iteration-count: 2;
+}
+
+.whisk-round {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.animate .whisk-round {
+    animation: whisk-round 2s linear 2.5s infinite forwards;
+    animation-iteration-count: 2;
+}
+
+@keyframes whisk-roround {
+    from {
+        transform: rotate(0deg);
+        transform-origin: center 0;
+    }
+
+    to {
+        transform: rotate(360deg);
+        transform-origin: center 0;
+    }
+}
+
+@keyframes whisk-round {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
 }
 
 @media (max-width: 1366px) {

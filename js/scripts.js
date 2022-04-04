@@ -306,8 +306,43 @@ $(document).ready(function () {
             $('.constructor-slide1 .taste-element').removeClass('choice');
             $(this).addClass('choice');
             
-            $('.dough').removeClass('choice dough1 dough2 dough3');
-            $('.dough').addClass('choice dough'+dough_color);
+            $('.dough').removeClass('choice');
+            $('.dough').addClass('choice');
+
+            // анимация добавления вкуса в тесто
+            if(getCookie('hint2') == '1') {
+                $('.constructor-animation').fadeIn().addClass('animate');
+                $('.dough-animation').fadeIn().addClass('dough-taste'+dough);
+                setTimeout(function(){
+                    $('.constructor-animation').fadeOut();
+                    setTimeout(function(){
+                        $('.constructor-animation').removeClass('animate');
+                        $('.dough-animation').removeClass().addClass('dough-animation');
+                    },500);
+                    $('.dough').removeClass('choice dough1 dough2 dough3');
+                    $('.dough').addClass('choice dough'+dough_color);
+                }, 7500);
+            } else {
+                $('.close-hint2').click(function(){
+                    setCookie('hint2', '1', {'max-age': 31536000});
+                    $('.constructor-hints').fadeOut();
+                    $('.hint2').remove();
+
+                    setTimeout(function(){
+                        $('.constructor-animation').fadeIn().addClass('animate');
+                        $('.dough-animation').fadeIn().addClass('dough-taste'+dough);
+                        setTimeout(function(){
+                            $('.constructor-animation').fadeOut();
+                            setTimeout(function(){
+                                $('.constructor-animation').removeClass('animate');
+                                $('.dough-animation').removeClass().addClass('dough-animation');
+                            },500);
+                            $('.dough').removeClass('choice dough1 dough2 dough3');
+                            $('.dough').addClass('choice dough'+dough_color);
+                        }, 7500);
+                    }, 500);
+                });
+            }
 
             $('.constructor-slide1 .next-constructor-slide .btn').removeClass('disabled');
 
@@ -465,11 +500,6 @@ $(document).ready(function () {
         $('.hint2').remove();
     }
 
-    $('.close-hint2').click(function(){
-        setCookie('hint2', '1', {'max-age': 31536000});
-        $('.constructor-hints').fadeOut();
-        $('.hint2').remove();
-    });
 });
 
 ( function() {
