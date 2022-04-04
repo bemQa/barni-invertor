@@ -3994,6 +3994,7 @@ table td:nth-child(3) {
     font-size: 18px;
     line-height: 20px;
     text-transform: uppercase;
+    word-break: break-word;
     color: #003595;
     z-index: 2;
 }
