@@ -5898,6 +5898,11 @@ table td:nth-child(3) {
         font-size: 16px;
         line-height: 19px;
     }
+
+    .whisk-roround {
+        top: 300px;
+        bottom: auto;
+    }
 }
 
 @media (max-width: 375px) {
@@ -5916,5 +5921,9 @@ table td:nth-child(3) {
 
     .winner.orange .tooltip {
         right: -400px;
+    }
+
+    .page-subtitle {
+        font-size: 18px;
     }
 }
