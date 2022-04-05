@@ -197,6 +197,8 @@ $(document).ready(function () {
         $('.tab-item.' + tab).addClass('active');
     });
 
+    figuresNumber();
+
     if (window.innerWidth < 1000) {
         if ($('.main-figures').length) {
             $('.main-figures').slick({
@@ -230,41 +232,43 @@ $(document).ready(function () {
         $(this).parent().removeClass('active');
     });
 
-    $('.btn-number').click(function(e) {
-        var type = $(this).attr('data-type');
-        var field = $(this).attr('data-field');
-        var input = $(this).parent().find('input[name ='+field+']');
-        var min = input.attr('min');
-        var max = input.attr('max');
-        min = parseInt(min);
-        max = parseInt(max);
-        var currentVal;
-        var value = input.val();
-        if (type == 'minus') {
-            if (value > min) {
-                currentVal = parseInt(value) - 1;
-                input.val(currentVal).change();
+    function figuresNumber() {
+        $('.btn-number').click(function(e) {
+            var type = $(this).attr('data-type');
+            var field = $(this).attr('data-field');
+            var input = $(this).parent().find('input[name ='+field+']');
+            var min = input.attr('min');
+            var max = input.attr('max');
+            min = parseInt(min);
+            max = parseInt(max);
+            var currentVal;
+            var value = input.val();
+            if (type == 'minus') {
+                if (value > min) {
+                    currentVal = parseInt(value) - 1;
+                    input.val(currentVal).change();
+                }
             }
-        }
-        if (type == 'plus') {
-            if (value < max) {
-                currentVal = parseInt(value) + 1;
-                input.val(currentVal).change();
+            if (type == 'plus') {
+                if (value < max) {
+                    currentVal = parseInt(value) + 1;
+                    input.val(currentVal).change();
+                }
             }
-        }
-    });
-    $('.input-number').change(function() {
-        var min = $(this).attr('min');
-        var max = $(this).attr('max');
-        var val = $(this).val();
-        var name = $(this).parent().find('.input-number').attr('name');
-        if (val == min) {
-            $(this).parent().find(".btn-number[data-type='minus'][data-field='" + name + "']").attr('disabled', 'true');
-        } else $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled');
-        if (val == max) {
-            $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").attr('disabled', 'true');
-        } else $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled');
-    });
+        });
+        $('.input-number').change(function() {
+            var min = $(this).attr('min');
+            var max = $(this).attr('max');
+            var val = $(this).val();
+            var name = $(this).parent().find('.input-number').attr('name');
+            if (val == min) {
+                $(this).parent().find(".btn-number[data-type='minus'][data-field='" + name + "']").attr('disabled', 'true');
+            } else $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled');
+            if (val == max) {
+                $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").attr('disabled', 'true');
+            } else $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled');
+        });
+    }
 
     if($('.constructor-page').length) {
         $('.taste-slider').not('.filling-slider').slick({
