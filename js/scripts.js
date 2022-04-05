@@ -198,22 +198,26 @@ $(document).ready(function () {
     });
 
     if (window.innerWidth < 1000) {
-        $('.main-figures').slick({
-            dots: true,
-            arrows: false,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 1,
-            variableWidth: true
-        });
+        if ($('.main-figures').length) {
+            $('.main-figures').slick({
+                dots: true,
+                arrows: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                variableWidth: true
+            });
+        }
 
-        $('.lk-tastes.mobile-visible').slick({
-            dots: false,
-            arrows: true,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 1
-        });
+        if ($('.lk-tastes.mobile-visible').length) {
+            $('.lk-tastes.mobile-visible').slick({
+                dots: false,
+                arrows: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1
+            });
+        }
     }
 
     $('.tooltip-trigger').click(function(e) {
