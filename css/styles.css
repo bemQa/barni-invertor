@@ -4670,6 +4670,16 @@ table td:nth-child(3) {
     }
 }
 
+.name-taste-popup .popup__wrap {
+    max-width: 520px;
+    background: url(../img/bg-popup-big.png) center 0 no-repeat;
+    background-size: cover;
+}
+
+.name-taste-popup .popup__inner {
+    max-width: 500px;
+}
+
 @media (max-width: 1366px) {
     
 }
@@ -5489,13 +5499,15 @@ table td:nth-child(3) {
         right: 0;
     }
 
-    .reg-taste-popup .popup__wrap {
+    .reg-taste-popup .popup__wrap,
+    .name-taste-popup .popup__wrap {
         max-width: 340px;
         background: url(../img/bg-popup.png) center 0 no-repeat;
         background-size: cover;
     }
 
-    .reg-taste-popup .popup__inner {
+    .reg-taste-popup .popup__inner,
+    .name-taste-popup .popup__inner {
         max-width: 300px;
     }
 
