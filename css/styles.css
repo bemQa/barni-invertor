@@ -4539,7 +4539,7 @@ table td:nth-child(3) {
 }
 
 .animate .dough-animation {
-    animation: doughIn 1s linear both, doughOut 1s linear 6.5s forwards;
+    animation: doughIn 1s linear both, doughOut 1s linear 4.5s forwards;
 }
 
 @keyframes doughIn {
@@ -4570,7 +4570,6 @@ table td:nth-child(3) {
     top: 0;
     bottom: 0;
     left: -2500px;
-    left: -300px;
     right: 0;
     margin: auto;
     width: 374px;
@@ -4578,9 +4577,9 @@ table td:nth-child(3) {
     transition: all .2s linear;
 }
 
-.animate .whisk {
+/*.animate .whisk {
     animation: whiskIn 2s linear both, whiskOut 2s linear 7s forwards;
-}
+}*/
 
 .whisk::before {
     content: '';
@@ -4627,10 +4626,10 @@ table td:nth-child(3) {
     margin: auto;
 }
 
-.animate .whisk-roround {
+/*.animate .whisk-roround {
     animation: whisk-roround 2s linear 2.5s infinite forwards;
     animation-iteration-count: 2;
-}
+}*/
 
 .whisk-round {
     position: absolute;
@@ -4643,10 +4642,10 @@ table td:nth-child(3) {
     margin: auto;
 }
 
-.animate .whisk-round {
+/*.animate .whisk-round {
     animation: whisk-round 2s linear 2.5s infinite forwards;
     animation-iteration-count: 2;
-}
+}*/
 
 @keyframes whisk-roround {
     from {
@@ -4667,6 +4666,246 @@ table td:nth-child(3) {
 
     to {
         transform: rotate(-360deg);
+    }
+}
+
+.blinks {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: -100px;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 142px;
+    z-index: 1;
+}
+
+.blink-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 87px;
+    height: 55px;
+}
+
+.animate .blink-left {
+    animation: blink-left 1s linear forwards;
+    animation-delay: 4.5s;
+}
+
+@keyframes blink-left {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+
+    to {
+        left: -50px;
+        opacity: 0;
+    }
+}
+
+.blink-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92px;
+    height: 114px;
+}
+
+.animate .blink-right {
+    animation: blink-right 1s linear forwards;
+    animation-delay: 4.5s;
+}
+
+@keyframes blink-right {
+    from {
+        right: 0;
+        opacity: 1;
+    }
+
+    to {
+        right: -50px;
+        opacity: 0;
+    }
+}
+
+.blink {
+    position: absolute;
+}
+
+.blink1 {
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 5px;
+    background: url(../img/blink2.svg) center no-repeat;
+    background-size: contain;
+    animation: blink2 2s infinite linear;
+}
+
+.blink2 {
+    top: 9px;
+    left: 12px;
+    width: 12px;
+    height: 22px;
+    background: url(../img/blink1.svg) center no-repeat;
+    background-size: contain;
+    animation: blink1 2s infinite linear;
+}
+
+.blink3 {
+    top: 23px;
+    left: 7px;
+    width: 9px;
+    height: 17px;
+    background: url(../img/blink1.svg) center no-repeat;
+    background-size: contain;
+    animation: blink1 2s infinite linear;
+    animation-delay: .3s;
+}
+
+.blink4 {
+    top: 32px;
+    left: 28px;
+    width: 8px;
+    height: 9px;
+    background: url(../img/blink2.svg) center no-repeat;
+    background-size: contain;
+    animation: blink2 3s infinite linear;
+}
+
+.blink5 {
+    top: 20px;
+    left: 47px;
+    width: 11px;
+    height: 12px;
+    background: url(../img/blink2.svg) center no-repeat;
+    background-size: contain;
+    animation: blink2 3s infinite linear;
+    animation-delay: .3s;
+}
+
+.blink6 {
+    top: 50px;
+    left: 55px;
+    width: 4px;
+    height: 5px;
+    background: url(../img/blink2.svg) center no-repeat;
+    background-size: contain;
+    animation: blink2 2.5s infinite linear;
+    animation-delay: .3s;
+}
+
+.blink7 {
+    top: 17px;
+    left: 66px;
+    width: 21px;
+    height: 38px;
+    background: url(../img/blink1.svg) center no-repeat;
+    background-size: contain;
+    animation: blink1 3s infinite linear;
+}
+
+.blink8 {
+    top: 0;
+    left: 0;
+    width: 43px;
+    height: 77px;
+    background: url(../img/blink1.svg) center no-repeat;
+    background-size: contain;
+    animation: blink1 3.5s infinite linear;
+}
+
+.blink9 {
+    top: 5px;
+    left: 26px;
+    width: 15px;
+    height: 30px;
+    background: url(../img/blink1.svg) center no-repeat;
+    background-size: contain;
+    animation: blink1 2s infinite linear;
+    animation-delay: .3s;
+}
+
+.blink10 {
+    top: 45px;
+    left: 48px;
+    width: 14px;
+    height: 15px;
+    background: url(../img/blink2.svg) center no-repeat;
+    background-size: contain;
+    animation: blink2 3.5s infinite linear;
+}
+
+.blink11 {
+    top: 45px;
+    left: 71px;
+    width: 6px;
+    height: 7px;
+    background: url(../img/blink2.svg) center no-repeat;
+    background-size: contain;
+    animation: blink2 2.5s infinite linear;
+    animation-delay: .2s;
+}
+
+.blink12 {
+    top: 64px;
+    left: 67px;
+    width: 8px;
+    height: 9px;
+    background: url(../img/blink2.svg) center no-repeat;
+    background-size: contain;
+    animation: blink2 2.5s infinite linear;
+}
+
+.blink13 {
+    top: 65px;
+    left: 87px;
+    width: 4px;
+    height: 5px;
+    background: url(../img/blink2.svg) center no-repeat;
+    background-size: contain;
+    animation: blink2 2s infinite linear;
+    animation-delay: .3s;
+}
+
+.blink14 {
+    top: 87px;
+    left: 74px;
+    width: 13px;
+    height: 26px;
+    background: url(../img/blink1.svg) center no-repeat;
+    background-size: contain;
+    animation: blink1 2s infinite linear;
+}
+
+@keyframes blink1 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes blink2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
 

@@ -321,6 +321,7 @@ $(document).ready(function () {
             if(getCookie('hint2') == '1') {
                 $('.constructor-animation').fadeIn().addClass('animate');
                 $('.dough-animation').fadeIn().addClass('dough-taste'+dough);
+                $('.blinks').fadeIn();
                 setTimeout(function(){
                     $('.constructor-animation').fadeOut();
                     setTimeout(function(){
@@ -329,7 +330,7 @@ $(document).ready(function () {
                     },500);
                     $('.dough').removeClass('choice dough1 dough2 dough3');
                     $('.dough').addClass('choice dough'+dough_color);
-                }, 7500);
+                }, 5500);
             } else {
                 $('.close-hint2').click(function(){
                     setCookie('hint2', '1', {'max-age': 31536000});
@@ -339,6 +340,7 @@ $(document).ready(function () {
                     setTimeout(function(){
                         $('.constructor-animation').fadeIn().addClass('animate');
                         $('.dough-animation').fadeIn().addClass('dough-taste'+dough);
+                        $('.blinks').fadeIn();
                         setTimeout(function(){
                             $('.constructor-animation').fadeOut();
                             setTimeout(function(){
@@ -347,7 +349,7 @@ $(document).ready(function () {
                             },500);
                             $('.dough').removeClass('choice dough1 dough2 dough3');
                             $('.dough').addClass('choice dough'+dough_color);
-                        }, 7500);
+                        }, 5500);
                     }, 500);
                 });
             }
