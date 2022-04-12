@@ -330,7 +330,7 @@ $(document).ready(function () {
                     },500);
                     $('.dough').removeClass('choice dough1 dough2 dough3');
                     $('.dough').addClass('choice dough'+dough_color);
-                }, 5500);
+                }, 2500);
             } else {
                 $('.close-hint2').click(function(){
                     setCookie('hint2', '1', {'max-age': 31536000});
@@ -349,7 +349,7 @@ $(document).ready(function () {
                             },500);
                             $('.dough').removeClass('choice dough1 dough2 dough3');
                             $('.dough').addClass('choice dough'+dough_color);
-                        }, 5500);
+                        }, 2500);
                     }, 500);
                 });
             }

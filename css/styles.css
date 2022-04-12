@@ -4539,7 +4539,7 @@ table td:nth-child(3) {
 }
 
 .animate .dough-animation {
-    animation: doughIn 1s linear both, doughOut 1s linear 4.5s forwards;
+    animation: doughIn 1s linear both, doughOut 1s linear 1.5s forwards;
 }
 
 @keyframes doughIn {
@@ -4691,7 +4691,7 @@ table td:nth-child(3) {
 
 .animate .blink-left {
     animation: blink-left 1s linear forwards;
-    animation-delay: 4.5s;
+    animation-delay: 1.5s;
 }
 
 @keyframes blink-left {
@@ -4716,7 +4716,7 @@ table td:nth-child(3) {
 
 .animate .blink-right {
     animation: blink-right 1s linear forwards;
-    animation-delay: 4.5s;
+    animation-delay: 1.5s;
 }
 
 @keyframes blink-right {
