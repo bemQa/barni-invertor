@@ -434,16 +434,44 @@
 							<button class="btn btn-popup">Отправить</button>
 						</div>
 						<div class="reg-text">
-	                    	<a href="#!" class="link popup-link tooltip-trigger">Где найти код?</a>
-	                    	<div class="tooltip">
-	                    		<a href="#!" class="close-tooltip"><img src="img/close-tooltip.svg" alt=""></a>
-	                    		Код располагается на внутренней <br>
-	                    		стороне упаковки, и состоит из 9 символов <br>
-	                    		(цифр и заглавных латинских букв). <br>
-	                    		<span>Обрати внимание, что <br>коды присутствуют только <br>на упаковках с коммуникацией об акции.</span>
-	                    	</div>
+	                    	<a href="#!" class="link popup-link pop-op" data-popup="where-code">Где найти код?</a>
 	                    </div>
                     </form>
+                </div>
+            </div>
+		</div>
+		<div id="where-code" class="popup where-code-popup">
+			<div class="popup__wrap">
+				<a href="#!" class="close-popup js-close-popup"></a>
+                <div class="popup__inner">
+                    <div class="popup__title">Два способа найти код на упаковке:</div>
+                    <div class="popup__desc">
+                    	<p>
+                    		<span class="num">1.</span>
+                    		Заглянуть под крышку промо-упаковки Барни. Найти код на внутренней части упаковки из 7 символов (включая заглавные латинские буквы и цифры).
+                    	</p>
+                    </div>
+                    <div class="where-code-img">
+                    	<img src="img/where-code-img1.png" alt="">
+                    </div>
+                    <div class="popup__desc">
+                    	<p>
+                    		<span class="num">2.</span>
+                    		Если кода не оказалось внутри, найти на боковой части упаковки окошко с датой и временем изготовления. Код из 6 заглавных латинских букв располагается рядом с подсказкой "Код".
+                    	</p>
+                    </div>
+                    <div class="where-code-img">
+                    	<img src="img/where-code-img2.png" alt="">
+                    </div>
+                    <div class="popup__desc">
+                    	<p>
+                    		<span class="num">3.</span>
+                    		В случае, если найти код <br>не удалось, обратиться на почту <a href="mailto:info@barni.promo" class="link">info@barni.promo</a>. Мы вам обязательно поможем!
+                    	</p>
+                    </div>
+                    <div class="btn-wrapper">
+						<a href="#!" class="btn btn-popup js-close-popup">Понятно</a>
+					</div>
                 </div>
             </div>
 		</div>

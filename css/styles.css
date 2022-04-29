@@ -4919,6 +4919,30 @@ table td:nth-child(3) {
     max-width: 500px;
 }
 
+.where-code-popup .popup__desc {
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: left;
+    text-shadow: none;
+    color: #003595;
+}
+
+.where-code-popup .popup__desc span.num {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-family: Odds;
+    font-size: 30px;
+    line-height: 32px;
+    color: #E27F30;
+}
+
+.where-code-img {
+    margin-bottom: 10px;
+}
+
 @media (max-width: 1366px) {
     
 }
