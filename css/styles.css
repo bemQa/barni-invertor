@@ -5367,6 +5367,7 @@ table td:nth-child(3) {
 
     .main-figures-block {
         height: 700px;
+        margin-top: 70px;
         padding: 235px 0 60px 15px;
         background: url(../img/bg-figures-mob.jpg) center 0 no-repeat;
         background-size: cover;
