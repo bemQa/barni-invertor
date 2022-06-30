@@ -628,7 +628,7 @@ body {
 .barni {
     position: absolute;
     top: 64px;
-    left: -750px;
+    left: -500px;
     right: 0;
     margin: auto;
     width: 371px;
@@ -643,7 +643,7 @@ body {
     position: absolute;
     top: -8px;
     left: 0;
-    right: 0;
+    right: -200px;
     margin: auto;
     width: 420px;
     height: 356px;
@@ -685,7 +685,8 @@ body {
 
 .main-btn-wrapper {
     position: relative;
-    top: 280px;
+    top: 300px;
+    right: -100px;
     display: flex;
     -ms-align-items: center;
     align-items: center;
@@ -1035,6 +1036,7 @@ header {
 .main-figures-block {
     position: relative;
     height: 620px;
+    margin-top: 150px;
     padding: 150px 15px 70px;
     background: url(../img/bg-figures.png) center 0 no-repeat;
     background-size: 1176px;
@@ -5244,7 +5246,7 @@ table td:nth-child(3) {
 
     .barni {
         top: 275px;
-        left: -180px;
+        left: 0;
         width: 247px;
         height: 357px;
         z-index: 1;
@@ -5275,6 +5277,7 @@ table td:nth-child(3) {
 
     .main-btn-wrapper {
         top: 572px;
+        right: 0;
         z-index: 2;
     }
 
