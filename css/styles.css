@@ -4989,6 +4989,117 @@ table td:nth-child(3) {
     }
 }
 
+.main-winners-row {
+    margin-bottom: 50px;
+}
+
+.main-winners-row::before {
+    display: none;
+}
+
+.main-winner {
+    max-width: 316px;
+    padding-left: 20px;
+}
+
+.main-winner .winner-img {
+    width: 138px;
+    height: 264px;
+}
+
+.main-winner .winner-img::before {
+    top: -60px;
+}
+
+.main-winner .winner-info {
+    width: 296px;
+    margin-top: -30px;
+    padding: 5px 20px 20px 40px;
+}
+
+.main-winner .winner-info::before {
+    width: 296px;
+    height: 246px;
+    background: url(../img/main-winner-bg.png) center no-repeat;
+    background-size: contain;
+}
+
+.main-winner-title,
+.main-winner-title2 {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #003595;
+    z-index: 2;
+}
+
+.main-winner-title span,
+.main-winner-title2 span {
+    color: #FFFFFF;
+}
+
+.main-winner-title2 {
+    margin-bottom: 8px;
+}
+
+.main-winner-text {
+    position: relative;
+    max-width: 220px;
+    margin-bottom: 5px;
+    padding-right: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #003595;
+    z-index: 2;
+}
+
+.main-winner .winner-name {
+    text-align: left;
+    color: #fff;
+}
+
+.main-winner-photo {
+    position: absolute;
+    top: 0;
+    right: -130px;
+    width: 205px;
+    height: 211px;
+    z-index: 2;
+}
+
+.star {
+    position: absolute;
+}
+
+.star1 {
+    top: 25px;
+    right: 5px;
+    width: 20px;
+    height: 24px;
+    background: url(../img/star1.png) center/contain no-repeat;
+}
+
+.star2 {
+    top: 50px;
+    right: 10px;
+    width: 26px;
+    height: 33px;
+    background: url(../img/star2.png) center/contain no-repeat;
+}
+
+.star3 {
+    top: 13px;
+    right: 23px;
+    width: 37px;
+    height: 45px;
+    background: url(../img/star3.png) center/contain no-repeat;
+}
+
 @media (max-width: 1366px) {
     
 }
@@ -6231,6 +6342,72 @@ table td:nth-child(3) {
     .popup-taste-img {
         image-rendering: optimizequality;
         image-rendering: -webkit-optimize-contrast;
+    }
+
+    .main-winner {
+        align-items: flex-start;
+        height: 490px;
+        margin-top: 50px;
+    }
+
+    .main-winner .winner-info {
+        height: 300px;
+        padding: 40px 24px 20px;
+    }
+
+    .main-winner .winner-info::before {
+        width: 302px;
+        height: 310px;
+        background: url(../img/main-winner-bg-mob.png) center no-repeat;
+        background-size: contain;
+    }
+
+    .main-winner .winner-img {
+        top: 190px;
+        left: 0;
+    }
+
+    .main-winner-photo {
+        top: 200px;
+        right: -20px;
+        width: 208px;
+        height: 218px;
+    }
+
+    .main-winner-text {
+        max-width: 250px;
+        padding-right: 0;
+    }
+
+    .main-winner .winner-name {
+        width: 250px;
+        text-align: center;
+    }
+
+    .star1 {
+        top: 0;
+        left: 75px;
+        right: auto;
+    }
+
+    .star2 {
+        top: auto;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    .star3 {
+        top: 8px;
+        left: 45px;
+        right: auto;
+    }
+
+    .star4 {
+        bottom: 0;
+        right: 45px;
+        width: 20px;
+        height: 24px;
+        background: url(../img/star1.png) center/contain no-repeat;
     }
 }
 
